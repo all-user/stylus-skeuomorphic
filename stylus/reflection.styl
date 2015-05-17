@@ -1,0 +1,6 @@
+reflect_blend(o, a)
+  transparentify(blend(rgba($top_highlight, o), $theme_color), a)
+
+
+reflection()
+  'linear-gradient(' + top + ',' + reflect_blend($top_blend, $top_alpha) + ' 0%,' + reflect_blend($bottom_blend, $bottom_alpha) + ' 50%, transparent 50%)'

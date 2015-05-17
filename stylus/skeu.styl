@@ -1,0 +1,53 @@
+$skeu_prefix ?= ''
+@import 'nib'
+
+@import $material
+@import $usual
+@import './var.styl'
+
+@import './text.styl'
+@import './detail.styl'
+@import './vignette.styl'
+@import './reflection.styl'
+@import './texture.styl'
+
+bg_color()
+  background $bg_color
+
+circle()
+  border-radius 50%
+
+${$skeu_prefix}_skeu
+  z-index 0
+  display block
+  position relative
+  color $txt_color
+  draw_text()
+  if $duration isnt 0ms
+    transition $duration background, $duration color, $duration top, $duration text-shadow
+  draw_detail()
+  background convert(vignette() + ',' + reflection() + ',' + draw_texture($texture, $texture_param) + ',' + $base_color)
+  background-size auto, auto, unquote($image_size)
+
+// hover theme
+@import $hover
+@import './var.styl'
+
+${$skeu_prefix}_skeu_hover
+  color $txt_color
+  draw_text()
+  draw_detail()
+  background convert(vignette() + ',' + reflection() + ',' + draw_texture($texture, $texture_param) + ',' + $base_color)
+  background-size auto, auto, unquote($image_size)
+
+// active theme
+@import $active
+@import './var.styl'
+
+${$skeu_prefix}_skeu_active
+  top 4px
+  color $txt_color
+  draw_text()
+  draw_pushed()
+  background convert(vignette() + ',' + reflection() + ',' + draw_texture($texture, $texture_param) + ',' + $base_color)
+  background-size auto, auto, unquote($image_size)

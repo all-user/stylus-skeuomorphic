@@ -1,0 +1,89 @@
+flare(n)
+  m = 100 / n
+  str = ''
+  for i in (0..n)
+    if even(i)
+      c = rgba($peak, $texture_opacity)
+    else
+      c = rgba($gutter, $texture_opacity)
+    if i isnt n
+      str += '' + c + ' ' + m * i + '%, '
+    else
+      str += c
+  'linear-gradient(left,' + str + ')'
+
+v_stripe(n)
+  m = 100 / n
+  str = ''
+  for i in (0..n)
+    if even(i)
+      c = $peak
+    else
+      c = $gutter
+    if i isnt n
+      str += '' + c + ' ' + m * i + '%, ' + c + ' ' + m * (i + 1) + '%, '
+    else
+      str += c
+  background linear-gradient(left, str)
+
+h_stripe(n)
+  m = 100 / n
+  str = ''
+  for i in (0..n)
+    if even(i)
+      c = $peak
+    else
+      c = $gutter
+    if i isnt n
+      str += '' + c + ' ' + m * i + '%, ' + c + ' ' + m * (i + 1) + '%, '
+    else
+      str += c
+  background linear-gradient(top, str)
+
+tl_stripe_interval(n)
+  _$peak = rgba($peak, $texture_opacity)
+  _$gutter = rgba($gutter, $texture_opacity)
+  'repeating-linear-gradient(135deg, ' + _$peak + ',' + _$peak + ' ' + n + 'px,' + _$gutter + ' ' + n + 'px,' + _$gutter + ' ' + n * 2 + 'px)'
+
+tl_stripe(n)
+  m = 100 / n
+  str = ''
+  for i in (0..n)
+    if even(i)
+      c = rgba($peak, $texture_opacity)
+    else
+      c = rgba($gutter, $texture_opacity)
+    if i isnt n
+      str += '' + c + ' ' + m * i + '%, ' + c + ' ' + m * (i + 1) + '%, '
+    else
+      str += c
+  'linear-gradient(left top, ' + str ')'
+
+
+tr_stripe(n)
+  m = 100 / n
+  str = ''
+  for i in (0..n)
+    if even(i)
+      c = $peak
+    else
+      c = $gutter
+    if i isnt n
+      str += '' + c + ' ' + m * i + '%, ' + c + ' ' + m * (i + 1) + '%, '
+    else
+      str += c
+  background linear-gradient(top right, str)
+
+draw_texture(type, param)
+  if type is 'flare'
+    return flare(param)
+  if type is 'v_stripe'
+    v_stripe(n)
+  if type is 'h_stripe'
+    h_stripe(n)
+  if type is 'tl_stripe'
+    return tl_stripe(param)
+  if type is 'tr_stripe'
+    tr_stripe(n)
+  if type is 'image'
+    return 'url("' + param + '")'

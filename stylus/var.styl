@@ -1,0 +1,36 @@
+// generate basic color
+$base_color = $theme_color
+
+if $lightness_mod > 0
+  $base_color = lighten($theme_color, $lightness_mod)
+if $lightness_mod < 0
+  $base_color = darken($theme_color, abs($lightness_mod))
+
+if $saturation_mod > 0
+  $base_color = saturate($base_color, $saturation_mod)
+if $saturation_mod < 0
+  $base_color = desaturate($base_color, abs($saturation_mod))
+
+$base_color = spin($base_color, $spin_mod)
+
+// generate tones
+$$indirect_light_base = blend(rgba(spin(complement($theme_color), $spin_mod), .2), saturate(darken($theme_color, 5), 9))
+$edge_reflected   = rgba(255,255,255,.2)
+$middle_tone      = saturate(blend(lighten(rgba(spin(complement($base_color), $spin_mod*3), .3), 5%), lighten($base_color, 10%)), 3)
+$top_highlight    = rgba(255,255,255,1)
+$bottom_shadow    = black
+$bottom_reflected = rgba(255,255,255,.8)
+$indirect_light   = rgba($$indirect_light_base, .6)
+$indirect_shadow  = rgba(0,0,0,.25)
+$inner_reflection = rgba(255,255,255,$diffusion)
+$top_saturator    = hsla(hue($theme_color) - $spin_mod*5, 100%, 11%, 1)
+$top_inner_light  = rgba(255,255,255,.03)
+$top_reflected    = transparentify(blend(rgba($$indirect_light_base, .1), $theme_color), .8)
+$bottom_tone      = rgba(0,0,0,.4)
+
+// texture
+$gutter = darken(saturate(blend(rgba(saturate(spin(complement($base_color), $spin_mod*3), 5), .16), darken($base_color, 33)), 35), 10)
+$peak = hue(blend(transparentify($gutter, .6), $theme_color), $spin_mod*-2)
+
+$drop_shadow = rgba($gutter, .15)
+$image_size ?= 'auto'
