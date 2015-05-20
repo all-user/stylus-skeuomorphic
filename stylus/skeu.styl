@@ -17,37 +17,64 @@ bg_color()
 circle()
   border-radius 50%
 
-${$skeu_prefix}_skeu
+skeu_basic()
   z-index 0
   display block
   position relative
-  color $txt_color
-  draw_text()
   if $duration isnt 0ms
     transition $duration background, $duration color, $duration top, $duration text-shadow
-  draw_detail()
+
+skeu_common()
+  color $txt_color
+  draw_text()
   background convert(vignette() + ',' + reflection() + ',' + draw_texture($texture, $texture_param) + ',' + $base_color)
   background-size auto, auto, unquote($image_size)
+
+${$skeu_prefix}_skeu
+  skeu_basic()
+  skeu_common()
+  draw_detail()
+
+${$skeu_prefix}_skeu_open
+  skeu_basic()
+  skeu_common()
+  draw_detail_open()
+
+${$skeu_prefix}_skeu_open_l
+  skeu_basic()
+  skeu_common()
+  draw_detail_open_l()
+
+${$skeu_prefix}_skeu_open_r
+  skeu_basic()
+  skeu_common()
+  draw_detail_open_r()
 
 // hover theme
 @import $hover
 @import './var.styl'
 
 ${$skeu_prefix}_skeu_hover
-  color $txt_color
-  draw_text()
+  skeu_common()
   draw_detail()
-  background convert(vignette() + ',' + reflection() + ',' + draw_texture($texture, $texture_param) + ',' + $base_color)
-  background-size auto, auto, unquote($image_size)
+
+${$skeu_prefix}_skeu_open_hover
+  skeu_common()
+  draw_detail_open()
+
+${$skeu_prefix}_skeu_open_l_hover
+  skeu_common()
+  draw_detail_open_l()
+
+${$skeu_prefix}_skeu_open_r_hover
+  skeu_common()
+  draw_detail_open_r()
 
 // active theme
 @import $active
 @import './var.styl'
 
 ${$skeu_prefix}_skeu_active
-  top 4px
-  color $txt_color
-  draw_text()
+  top $active_depth
+  skeu_common()
   draw_pushed()
-  background convert(vignette() + ',' + reflection() + ',' + draw_texture($texture, $texture_param) + ',' + $base_color)
-  background-size auto, auto, unquote($image_size)

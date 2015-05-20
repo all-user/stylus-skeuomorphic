@@ -14,7 +14,53 @@ draw_detail()
      0px   5px   5px  -5px $top_saturator    inset,
      0px   5px   5px   0px $top_inner_light  inset,
      0px  -5px   0px   0px $bottom_tone      inset,
-     0px  10px   5px   0px $drop_shadow;
+     0px  $shadow_length 5px   0px $drop_shadow;
+
+draw_detail_open()
+  box-shadow:
+     0px   1px   0px   0px $middle_tone      inset,
+     0px   2px   0px   0px $top_highlight    inset,
+     0px  -1px   0px   0px $bottom_shadow    inset,
+     0px -10px   5px  -8px $bottom_reflected inset,
+     0px   0px  30px   5px $indirect_light   inset,
+     0px   0px  30px   5px $indirect_shadow  inset,
+     0px   0px  40px  15px $inner_reflection inset,
+     0px   5px   5px  -5px $top_saturator    inset,
+     0px   5px   5px   0px $top_inner_light  inset,
+     0px  -5px   0px   0px $bottom_tone      inset,
+     0px  $shadow_length 5px   0px $drop_shadow;
+
+draw_detail_open_l()
+  box-shadow:
+    -1px   0px   0px   0px $edge_reflected   inset,
+    -4px   0px   2px  -2px $middle_tone      inset,
+     0px   1px   0px   0px $middle_tone      inset,
+     0px   2px   0px   0px $top_highlight    inset,
+     0px  -1px   0px   0px $bottom_shadow    inset,
+     0px -10px   5px  -8px $bottom_reflected inset,
+     0px   0px  30px   5px $indirect_light   inset,
+     0px   0px  30px   5px $indirect_shadow  inset,
+     0px   0px  40px  15px $inner_reflection inset,
+     0px   5px   5px  -5px $top_saturator    inset,
+     0px   5px   5px   0px $top_inner_light  inset,
+     0px  -5px   0px   0px $bottom_tone      inset,
+     0px  $shadow_length 5px   0px $drop_shadow;
+
+draw_detail_open_r()
+  box-shadow:
+     1px   0px   0px   0px $edge_reflected   inset,
+     4px   0px   2px  -2px $middle_tone      inset,
+     0px   1px   0px   0px $middle_tone      inset,
+     0px   2px   0px   0px $top_highlight    inset,
+     0px  -1px   0px   0px $bottom_shadow    inset,
+     0px -10px   5px  -8px $bottom_reflected inset,
+     0px   0px  30px   5px $indirect_light   inset,
+     0px   0px  30px   5px $indirect_shadow  inset,
+     0px   0px  40px  15px $inner_reflection inset,
+     0px   5px   5px  -5px $top_saturator    inset,
+     0px   5px   5px   0px $top_inner_light  inset,
+     0px  -5px   0px   0px $bottom_tone      inset,
+     0px  $shadow_length 5px   0px $drop_shadow;
 
 draw_pushed()
   box-shadow:

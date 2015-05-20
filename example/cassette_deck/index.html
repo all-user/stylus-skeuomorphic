@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function(e) {
+            var play         = document.getElementById('play-input');
+            var rec          = document.getElementById('rec-input');
+            var stop         = document.getElementById('stop');
+            var forward      = document.getElementById('forward');
+            var backward     = document.getElementById('backward');
+            var fastForward  = document.getElementById('fast-forward');
+            var fastBackward = document.getElementById('fast-backward');
+
+            var resetRec = function(e) {
+                rec.checked = false;
+            };
+            var resetPlayAndRec = function(e) {
+                resetRec();
+                play.checked = false;
+            };
+
+            stop.addEventListener('mousedown', function (e) {
+                resetPlayAndRec();
+            });
+
+            [forward, backward, fastForward, fastBackward].forEach(function(elm) {
+                elm.addEventListener('mousedown', function (e) {
+                    resetRec();
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="skeu pink" id="fast-backward"><i class="fa fa-fast-backward"></i>
+        </div><div class="skeu pink" id="backward"><i class="fa fa-backward"></i>
+        </div><div class="skeu pink" id="stop"><i class="fa fa-stop"></i>
+        </div><input type="checkbox" id="play-input"><label class="skeu pink" id="play" for="play-input"><i class="fa fa-play"></i>
+        </label><input type="checkbox" id="rec-input"><label class="skeu pink" id="rec" for="rec-input"><i class="fa fa-circle"></i>
+        </label><div class="skeu pink" id="forward"><i class="fa fa-forward"></i>
+        </div><div class="skeu pink" id="fast-forward"><i class="fa fa-fast-forward"></i></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+$shadow_length = 0px
+$active_depth  = 1px
+
+$skeu_prefix = 'pink'
+@import '../path_to_theme/pink.styl'
+@import '../../stylus/skeu.styl'
+
+body
+  margin 0
+  padding 0
+  position relative
+  text-align center
+  bg_color()
+  min-height 100vh
+
+#wrapper
+  display inline-block
+  size 560px 60px
+  padding 0
+  margin auto
+  absolute top 0 bottom 0 right 0 left 0
+
+.pink
+  @extend $pink_skeu_open
+  color black
+  &:hover
+    @extend $pink_skeu_open_hover
+  &:active
+    @extend $pink_skeu_active
+
+.pink:nth-child(1)
+  @extend $pink_skeu_open_r
+  color black
+  &:hover
+    @extend $pink_skeu_open_r_hover
+  &:active
+    @extend $pink_skeu_active
+
+.pink:nth-last-child(1)
+  @extend $pink_skeu_open_l
+  color black
+  &:hover
+    @extend $pink_skeu_open_l_hover
+  &:active
+    @extend $pink_skeu_active
+
+.pink.skeu
+  box-sizing border-box
+  display inline-block
+  size 80px auto
+  font-size 20px
+  line-height 20px
+  padding 20px 0
+  margin 0
+  border-right 1px solid #555
+
+.pink.skeu:nth-last-child(1)
+  border-right none
+
+#rec-input
+  display none
+  & + #rec
+    color #c00
+    &:active
+      top 2px
+  &:checked + #rec
+    @extend $pink_skeu_active
+    top 1px
+    color #e00
+  &:checked + #rec:active
+    top 2px
+
+#play-input
+  display none
+  & + #play
+    color #060
+    &:active
+      top 2px
+  &:checked + #play
+    @extend $pink_skeu_active
+    top 1px
+    color #0a0
+  &:checked + #play:active
+    top 2px
