@@ -1,8 +1,8 @@
 $shadow_length = 0px
 $active_depth  = 1px
 
-$skeu_prefix = 'pink'
-@import '../path_to_theme/pink.styl'
+$skeu_prefix = 'purple'
+@import 'theme_path.styl'
 @import '../../stylus/skeu.styl'
 
 body
@@ -20,31 +20,31 @@ body
   margin auto
   absolute top 0 bottom 0 right 0 left 0
 
-.pink
-  @extend $pink_skeu_open
+.purple
+  @extend $purple_skeu_open
   color black
   &:hover
-    @extend $pink_skeu_open_hover
+    @extend $purple_skeu_open_hover
   &:active
-    @extend $pink_skeu_active
+    @extend $purple_skeu_active
 
-.pink:nth-child(1)
-  @extend $pink_skeu_open_r
+.purple:nth-child(1)
+  @extend $purple_skeu_open_r
   color black
   &:hover
-    @extend $pink_skeu_open_r_hover
+    @extend $purple_skeu_open_r_hover
   &:active
-    @extend $pink_skeu_active
+    @extend $purple_skeu_active
 
-.pink:nth-last-child(1)
-  @extend $pink_skeu_open_l
+.purple:nth-last-child(1)
+  @extend $purple_skeu_open_l
   color black
   &:hover
-    @extend $pink_skeu_open_l_hover
+    @extend $purple_skeu_open_l_hover
   &:active
-    @extend $pink_skeu_active
+    @extend $purple_skeu_active
 
-.pink.skeu
+.purple.skeu
   box-sizing border-box
   display inline-block
   size 80px auto
@@ -54,31 +54,31 @@ body
   margin 0
   border-right 1px solid #555
 
-.pink.skeu:nth-last-child(1)
+.purple.skeu:nth-last-child(1)
   border-right none
 
 #rec-input
   display none
   & + #rec
-    color #c00
+    color #c07
     &:active
       top 2px
   &:checked + #rec
-    @extend $pink_skeu_active
+    @extend $purple_skeu_active
     top 1px
-    color #e00
+    color #e08
   &:checked + #rec:active
     top 2px
 
 #play-input
   display none
   & + #play
-    color #060
+    color #068
     &:active
       top 2px
   &:checked + #play
-    @extend $pink_skeu_active
+    @extend $purple_skeu_active
     top 1px
-    color #0a0
+    color #0a9
   &:checked + #play:active
     top 2px

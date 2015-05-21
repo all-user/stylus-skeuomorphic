@@ -3,12 +3,12 @@ stylus = require 'gulp-stylus'
 nib    = require 'nib'
 
 gulp.task 'stylus', ->
-  gulp.src './example/**/main*.styl'
+  gulp.src './examples/**/main.styl'
     .pipe stylus(use: [nib()])
-    .pipe gulp.dest './example/'
+    .pipe gulp.dest './examples/'
 
 
 gulp.task 'stylus:cassette_deck', ->
-  gulp.src './example/cassette_deck/main*.styl'
+  gulp.src './examples/cassette_deck/main.styl'
     .pipe stylus(use: [nib()])
-    .pipe gulp.dest './example/cassette_deck/'
+    .pipe gulp.dest './examples/cassette_deck/'
