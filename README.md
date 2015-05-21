@@ -11,37 +11,37 @@ __Node.js__ and __Gulp__ required.
 
 after Node.js installation...
 
-```bash
+```shell
 npm install -g gulp
 ```
 
 ### install
 
 1. clone repository.
-    ```bash
+    ```shell
     git clone https://github.com/all-user/stylus-skeuomorphic.git
     ```
 
 2. go into the directory.
-    ```bash
+    ```shell
     cd stylus-skeuomorphic
     ```
 
 3. install npm packages.
-    ```bash
+    ```shell
     npm install
     ```
 
 ### edit `index.html` and `main.styl`
 
 1. make new directory in `./examples`.
-    ```bash
+    ```shell
     cd examples
     mkdir my_example
     ```
 
 2. make `index.html` and `main.styl`.
-    ```bash
+    ```shell
     cd my_example
     touch index.html main.styl
     ```
@@ -83,13 +83,13 @@ npm install -g gulp
 
 ### compile `main.styl` files in `./examples/**`
 
-```bash
+```shell
 gulp stylus
 ```
 
 preview `index.html`.
 
-```bash
+```shell
 open index.html
 ```
 
