@@ -18,68 +18,68 @@ npm install -g gulp
 ### install
 
 1. clone repository.
-```bash
-git clone https://github.com/all-user/stylus-skeuomorphic.git
-```
+    ```bash
+    git clone https://github.com/all-user/stylus-skeuomorphic.git
+    ```
 
 2. go into the directory.
-```bash
-cd stylus-skeuomorphic
-```
+    ```bash
+    cd stylus-skeuomorphic
+    ```
 
 3. install npm packages.
-```bash
-npm install
-```
+    ```bash
+    npm install
+    ```
 
 ### edit `index.html` and `main.styl`
 
 1. make new directory in `./examples`.
-```bash
-cd examples
-mkdir my_example
-```
+    ```bash
+    cd examples
+    mkdir my_example
+    ```
 
 2. make `index.html` and `main.styl`.
-```bash
-cd my_example
-touch index.html main.styl
-```
+    ```bash
+    cd my_example
+    touch index.html main.styl
+    ```
 
 3. edit `index.html` as follows.
-```html
-<!doctype html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="main.css">
-</head>
-<body>
-    <div class="my-class">hello world!</div>
-</body>
-</html>
-```
+    ```html
+    <!doctype html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div class="my-class">hello world!</div>
+    </body>
+    </html>
+    ```
 
 4. edit `main.styl` as follows.
-```stylus
-$skeu_prefix = 'my'
-@import '../path_to_theme/gray.styl'
-@import '../../stylus/skeu.styl'
+    ```stylus
+    $skeu_prefix = 'my'
+    @import '../path_to_theme/gray.styl'
+    @import '../../stylus/skeu.styl'
 
-body
-  bg_color()
-  margin 20%
+    body
+      bg_color()
+      margin 20%
 
-.my-class
-  @extend $my_skeu
-  padding .5em
-  font-size 50px
-  font-family sans-serif
-  &:hover
-    @extend $my_skeu_hover
-  &:active
-    @extend $my_skeu_active
-```
+    .my-class
+      @extend $my_skeu
+      padding .5em
+      font-size 50px
+      font-family sans-serif
+      &:hover
+        @extend $my_skeu_hover
+      &:active
+        @extend $my_skeu_active
+    ```
 
 ### compile `main.styl` files in `./examples/**`
 
