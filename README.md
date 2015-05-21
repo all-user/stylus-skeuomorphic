@@ -68,9 +68,13 @@ $skeu_prefix = 'my'
 
 body
   bg_color()
+  margin 20%
 
 .my-class
   @extend $my_skeu
+  padding .5em
+  font-size 50px
+  font-family sans-serif
   &:hover
     @extend $my_skeu_hover
   &:active
