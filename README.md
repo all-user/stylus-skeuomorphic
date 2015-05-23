@@ -128,13 +128,13 @@ $skeu_prefix = 'my'
         draw UI defined by __`$usual`__.
 
     - __`$(pre)_skeu_chain`__<br>
-        this is such UI as chinable both sides.
+        as chinable both sides.
 
     - __`$(pre)_skeu_chain_l`__<br>
-        this is such UI as chinable only left side.
+        as chinable only left side.
 
     - __`$(pre)_skeu_chain_r`__<br>
-        this is such UI as chinable only right side.
+        as chinable only right side.
 
 
 + draw __`$hover`__ placeholders
@@ -143,13 +143,13 @@ $skeu_prefix = 'my'
         draw UI defined by __`$hover`__.
 
     - __`$(pre)_skeu_chain_hover`__<br>
-        this is such UI as chinable both sides.
+        as chinable both sides.
 
     - __`$(pre)_skeu_chain_l_hover`__<br>
-        this is such UI as chinable only left side.
+        as chinable only left side.
 
     - __`$(pre)_skeu_chain_r_hover`__<br>
-        this is such UI as chinable only right side.
+        as chinable only right side.
 
 + draw __`$active`__ placeholder
 
@@ -162,7 +162,7 @@ $skeu_prefix = 'my'
     draw color definted by __`$bg_color`__ to `background` .
 
 + __`circle()`__<br>
-    add CSS style `border-radius: 50%`.
+    add `border-radius: 50%` CSS style.
 
 ### Variables
 
