@@ -107,11 +107,11 @@ you can use these objects in your project.
 @import 'stylus-skeuomorphic/stylus/skeu.styl'
 ```
 
-### place holder
+### Placeholder
 
-use `@extend` keyword to use placeholder.<br>
-`(pre)` is replaced `$skeu_prefix`.<br>
-you should assign any string to `$skeu_prefix` before importing skeu.styl.
+use __`@extend`__ keyword to use placeholder.<br>
+__`(pre)`__ is replaced __`$skeu_prefix`__.<br>
+you should assign any strings to __`$skeu_prefix`__ before importing skeu.styl.
 
 ```stylus
 $skeu_prefix = 'my'
@@ -122,11 +122,47 @@ $skeu_prefix = 'my'
   @extend $my_skeu
 ```
 
-- __$(pre)_skeu__
++ draw __`$usual`__ placeholders
+
+    - __`$(pre)_skeu`__<br>
+        draw UI defined by __`$usual`__.
+
+    - __`$(pre)_skeu_chain`__<br>
+        this is such UI as chinable both sides.
+
+    - __`$(pre)_skeu_chain_l`__<br>
+        this is such UI as chinable only left side.
+
+    - __`$(pre)_skeu_chain_r`__<br>
+        this is such UI as chinable only right side.
 
 
++ draw __`$hover`__ placeholders
 
+    - __`$(pre)_skeu_hover`__<br>
+        draw UI defined by __`$hover`__.
 
+    - __`$(pre)_skeu_chain_hover`__<br>
+        this is such UI as chinable both sides.
 
-### global variables
+    - __`$(pre)_skeu_chain_l_hover`__<br>
+        this is such UI as chinable only left side.
+
+    - __`$(pre)_skeu_chain_r_hover`__<br>
+        this is such UI as chinable only right side.
+
++ draw __`$active`__ placeholder
+
+    - __`$(pre)_skeu_active`__<br>
+        draw UI defined by __`$active`__.
+
+### Functions
+
++ __`bg_color()`__<br>
+    draw color definted by __`$bg_color`__ to `background` .
+
++ __`circle()`__<br>
+    add CSS style `border-radius: 50%`.
+
+### Variables
 
