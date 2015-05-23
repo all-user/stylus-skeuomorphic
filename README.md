@@ -159,7 +159,7 @@ $skeu_prefix = 'my'
 ### Functions
 
 + __`bg_color()`__<br>
-    draw color definted by __`$bg_color`__ to `background` .
+    draw color defined by __`$bg_color`__ to `background` .
 
 + __`circle()`__<br>
     add `border-radius: 50%` CSS style.
