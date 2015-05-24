@@ -125,36 +125,45 @@ $skeu_prefix = 'my'
 + draw __`$usual`__ placeholders
 
     - __`$(pre)_skeu`__<br>
-        draw UI defined by __`$usual`__.
+        draw UI defined by __`$usual`__.<br>
+        ![usual](./images/usual.png)
 
     - __`$(pre)_skeu_chain`__<br>
-        as chinable both sides.
+        as chinable both sides.<br>
+        ![usual](./images/chain.png)
 
     - __`$(pre)_skeu_chain_l`__<br>
-        as chinable only left side.
+        as chinable only left side.<br>
+        ![usual](./images/chain_l.png)
 
     - __`$(pre)_skeu_chain_r`__<br>
-        as chinable only right side.
+        as chinable only right side.<br>
+        ![usual](./images/chain_r.png)
 
 
 + draw __`$hover`__ placeholders
 
     - __`$(pre)_skeu_hover`__<br>
-        draw UI defined by __`$hover`__.
+        draw UI defined by __`$hover`__.<br>
+        ![usual](./images/hover.png)
 
     - __`$(pre)_skeu_chain_hover`__<br>
-        as chinable both sides.
+        as chinable both sides.<br>
+        ![usual](./images/chain_hover.png)
 
     - __`$(pre)_skeu_chain_l_hover`__<br>
-        as chinable only left side.
+        as chinable only left side.<br>
+        ![usual](./images/chain_l_hover.png)
 
     - __`$(pre)_skeu_chain_r_hover`__<br>
-        as chinable only right side.
+        as chinable only right side.<br>
+        ![usual](./images/chain_r_hover.png)
 
 + draw __`$active`__ placeholder
 
     - __`$(pre)_skeu_active`__<br>
-        draw UI defined by __`$active`__.
+        draw UI defined by __`$active`__.<br>
+        ![usual](./images/active.png)
 
 ### Functions
 
