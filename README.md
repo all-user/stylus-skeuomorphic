@@ -168,10 +168,23 @@ $skeu_prefix = 'my'
 ### Functions
 
 + __`bg_color()`__<br>
-    draw color defined by __`$bg_color`__ to `background` .
+    draw color defined by __`$bg_color`__ to `background` .<br>
+    stylus<br>
+    ```stylus
+    body
+      bg_color()
+    ```
+    css<br>
+    ```css
+    body {
+        background: #edded4;
+    }
+    ```
+
 
 + __`circle()`__<br>
-    add `border-radius: 50%` CSS style.
+    add `border-radius: 50%` CSS style.<br>
+    ![usual](./images/circle.png)
 
 ### Variables
 
