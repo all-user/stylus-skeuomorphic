@@ -193,7 +193,6 @@ one defines color, ohter defines material.
 
 - __color defining__
     you should define 5 variables.<br>
-    __stylus-skeuomorphic/stylus/theme/pink/pink.styl__
     ```stylus
     // theme color
     $theme_color = #a9a19c
@@ -219,9 +218,8 @@ one defines color, ohter defines material.
     + __`$txt_color`__<br>
         set the text color.
 
-- __material defining__
+- __material defining__<br>
     `$duration`, `$texture`, `$texture_param`, `$texture_opacity`, `$bg_color` are optional.<br>
-    __stylus-skeuomorphic/stylus/theme/pink/material.styl__
     ```stylus
     $duration ?= 100ms
     $texture = 'flare'
