@@ -191,8 +191,8 @@ $skeu_prefix = 'my'
 theme consists of two types of `.styl` files.<br>
 one defines color, ohter defines material.
 
-- __color defining__
-    you should define 5 variables.<br>
+- __color defining__<br>
+    you should define 5 variables.
     ```stylus
     // theme color
     $theme_color = #a9a19c
@@ -219,7 +219,7 @@ one defines color, ohter defines material.
         set the text color.
 
 - __material defining__<br>
-    `$duration`, `$texture`, `$texture_param`, `$texture_opacity`, `$bg_color` are optional.<br>
+    `$duration`, `$texture`, `$texture_param`, `$texture_opacity`, `$bg_color` are optional.
     ```stylus
     $duration ?= 100ms
     $texture = 'flare'
