@@ -186,5 +186,95 @@ $skeu_prefix = 'my'
     add `border-radius: 50%` CSS style.<br>
     ![usual](./images/circle.png)
 
-### Variables
+### Theme Editing
 
+theme consists of two types of `.styl` files.<br>
+one defines color, ohter defines material.
+
+- __color defining__
+    you should define 5 variables.<br>
+    __stylus-skeuomorphic/stylus/theme/pink/pink.styl__
+    ```stylus
+    // theme color
+    $theme_color = #a9a19c
+
+    // modulation config
+    $lightness_mod  = -38
+    $saturation_mod = 0
+    $spin_mod       = -5deg
+
+    // text color
+    $txt_color = #eee
+    ```
+    + __`$theme_color`__<br>
+        all colors will be generated this color to the original.
+    + __`$lightness_mod`__<br>
+        set the amount to modulate lightness.<br>
+        normally, set this value darker.
+    + __`$saturation_mod`__<br>
+        set the amount to modulate saturation.
+    + __`$spin_mod`__<br>
+        set the amount to spin hue.<br>
+        you should use 'deg' unit.
+    + __`$txt_color`__<br>
+        set the text color.
+
+- __material defining__
+    `$duration`, `$texture`, `$texture_param`, `$texture_opacity`, `$bg_color` are optional.<br>
+    __stylus-skeuomorphic/stylus/theme/pink/material.styl__
+    ```stylus
+    $duration ?= 100ms
+    $texture = 'flare'
+    $texture_param = 5
+    $texture_opacity = .3
+
+    // outer background color
+    $bg_color = #edded4
+
+    // $vignette_effect: 0..1
+    $vignette_effect = .3
+
+    // $diffusion: 0..1
+    $diffusion = .1
+
+    // top_reflection
+    $top_blend = .25
+    $top_alpha = .8
+    $bottom_blend = .18
+    $bottom_alpha = .5
+    ```
+    + __`$duration`__<br>
+        set the duration of CSS transition from a state to another.
+    + __`$texture`__<br>
+        set the type of texture.
+        * __`'image'`__
+        * __`'flare'`__
+        * __`'v_stripe'`__
+        * __`'v_stripe_abs'`__
+        * __`'h_stripe'`__
+        * __`'h_stripe_abs'`__
+        * __`'tl_stripe'`__
+        * __`'tl_stripe_abs'`__
+        * __`'tr_stripe'`__
+        * __`'tr_stripe_abs'`__
+    + __`$texture_param`__<br>
+        paramator for `$texture`.<br>
+        this depends on the type of `$texture`.
+    + __`$texture_opacity`__<br>
+        opacity of texture.<br>
+        can not use when value of `$texute` is `'image'`.
+    + __`$bg_color`__<br>
+        this color is used with `bg_color()` function.
+    + __`$vignette_effect`__<br>
+        opacity of vignette effect.
+    + __`$diffusion`__<br>
+        opacity of white light diffusion.
+    + top light reflection
+        * __`$top_blend`__<br>
+            the amount of white light on top side in reflection.
+        * __`$top_alpha`__<br>
+            hiding power to hide the background on top side in reflection.
+        * __`$bottom_blend`__<br>
+            the amount of white light on bottom side in reflection.
+        * __`$bottom_alpha`__<br>
+            hiding power to hide the background on bottom side in reflection.

@@ -12,40 +12,12 @@ flare(n)
       str += c
   'linear-gradient(left,' + str + ')'
 
-v_stripe(n)
-  m = 100 / n
-  str = ''
-  for i in (0..n)
-    if even(i)
-      c = $peak
-    else
-      c = $gutter
-    if i isnt n
-      str += '' + c + ' ' + m * i + '%, ' + c + ' ' + m * (i + 1) + '%, '
-    else
-      str += c
-  background linear-gradient(left, str)
-
-h_stripe(n)
-  m = 100 / n
-  str = ''
-  for i in (0..n)
-    if even(i)
-      c = $peak
-    else
-      c = $gutter
-    if i isnt n
-      str += '' + c + ' ' + m * i + '%, ' + c + ' ' + m * (i + 1) + '%, '
-    else
-      str += c
-  background linear-gradient(top, str)
-
-tl_stripe_interval(n)
+stripe_abs(n, angle)
   _$peak = rgba($peak, $texture_opacity)
   _$gutter = rgba($gutter, $texture_opacity)
-  'repeating-linear-gradient(135deg, ' + _$peak + ',' + _$peak + ' ' + n + 'px,' + _$gutter + ' ' + n + 'px,' + _$gutter + ' ' + n * 2 + 'px)'
+  'repeating-linear-gradient(' + angle + ', ' + _$peak + ', ' + _$peak + ' ' + n + 'px,' + _$gutter + ' ' + n + 'px,' + _$gutter + ' ' + n * 2 + 'px)'
 
-tl_stripe(n)
+stripe(n, pos)
   m = 100 / n
   str = ''
   for i in (0..n)
@@ -57,33 +29,50 @@ tl_stripe(n)
       str += '' + c + ' ' + m * i + '%, ' + c + ' ' + m * (i + 1) + '%, '
     else
       str += c
-  'linear-gradient(left top, ' + str ')'
+  'linear-gradient(' + pos + ', ' + str + ')'
 
+v_stripe(n)
+  stripe(n, 'left')
+
+v_stripe_abs(n)
+  stripe_abs(n, '90deg')
+
+h_stripe(n)
+  stripe(n, 'top')
+
+h_stripe_abs(n)
+  stripe_abs(n, '180deg')
+
+tl_stripe(n)
+  stripe(n, 'left top')
+
+tl_stripe_abs(n)
+  stripe_abs(n, '135deg')
 
 tr_stripe(n)
-  m = 100 / n
-  str = ''
-  for i in (0..n)
-    if even(i)
-      c = $peak
-    else
-      c = $gutter
-    if i isnt n
-      str += '' + c + ' ' + m * i + '%, ' + c + ' ' + m * (i + 1) + '%, '
-    else
-      str += c
-  background linear-gradient(top right, str)
+  stripe(n, 'right top')
+
+tr_stripe_abs(n)
+  stripe_abs(n, '225deg')
 
 draw_texture(type, param)
   if type is 'flare'
     return flare(param)
   if type is 'v_stripe'
-    v_stripe(n)
+    return v_stripe(param)
+  if type is 'v_stripe_abs'
+    return v_stripe_abs(param)
   if type is 'h_stripe'
-    h_stripe(n)
+    return h_stripe(param)
+  if type is 'h_stripe_abs'
+    return h_stripe_abs(param)
   if type is 'tl_stripe'
     return tl_stripe(param)
+  if type is 'tl_stripe_abs'
+    return tl_stripe_abs(param)
   if type is 'tr_stripe'
-    tr_stripe(n)
+    return tr_stripe(param)
+  if type is 'tr_stripe_abs'
+    return tr_stripe_abs(param)
   if type is 'image'
     return 'url("' + param + '")'
