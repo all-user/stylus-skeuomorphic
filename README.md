@@ -251,19 +251,19 @@ one defines color, ohter defines material.
             `'$texture_param'`:(integer) repeated times of horizontal directional change.
         * __`'v_stripe'`__<br>
             `'$texture_param'`:(integer) number of stripes.
-        * __`'v_stripe_abs'`__
+        * __`'v_stripe_abs'`__<br>
             `'$texture_param'`:(integer) size of stripe width.
         * __`'h_stripe'`__<br>
             `'$texture_param'`:(integer) number of stripes.
-        * __`'h_stripe_abs'`__
+        * __`'h_stripe_abs'`__<br>
             `'$texture_param'`:(integer) size of stripe width.
         * __`'tl_stripe'`__<br>
             `'$texture_param'`:(integer) number of stripes.
-        * __`'tl_stripe_abs'`__
+        * __`'tl_stripe_abs'`__<br>
             `'$texture_param'`:(integer) size of stripe width.
         * __`'tr_stripe'`__<br>
             `'$texture_param'`:(integer) number of stripes.
-        * __`'tr_stripe_abs'`__
+        * __`'tr_stripe_abs'`__<br>
             `'$texture_param'`:(integer) size of stripe width.
     + __`$texture_param`__<br>
         paramator for `$texture`.<br>
