@@ -145,19 +145,15 @@ $skeu_prefix = 'my'
 
     - __`$(pre)_skeu_hover`__<br>
         draw UI defined by __`$hover`__.<br>
-        ![usual](./images/hover.png)
 
     - __`$(pre)_skeu_chain_hover`__<br>
         as chinable both sides.<br>
-        ![usual](./images/chain_hover.png)
 
     - __`$(pre)_skeu_chain_l_hover`__<br>
         as chinable only left side.<br>
-        ![usual](./images/chain_l_hover.png)
 
     - __`$(pre)_skeu_chain_r_hover`__<br>
         as chinable only right side.<br>
-        ![usual](./images/chain_r_hover.png)
 
 + draw __`$active`__ placeholder
 
