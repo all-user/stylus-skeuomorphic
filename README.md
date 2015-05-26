@@ -246,25 +246,25 @@ one defines color, ohter defines material.
     + __`$texture`__<br>
         set the type of texture.
         * __`'image'`__<br>
-            `'$texture_param'`:(string) image url (e.g. `'../../images/pattern.png'`).
+            paramator: string image url (e.g. `'../../images/pattern.png'`).
         * __`'flare'`__<br>
-            `'$texture_param'`:(integer) repeated times of horizontal directional change.
+            paramator: integer repeated times of horizontal directional change.
         * __`'v_stripe'`__<br>
-            `'$texture_param'`:(integer) number of stripes.
+            paramator: integer number of stripes.
         * __`'v_stripe_abs'`__<br>
-            `'$texture_param'`:(integer) size of stripe width.
+            paramator: integer size of stripe width.
         * __`'h_stripe'`__<br>
-            `'$texture_param'`:(integer) number of stripes.
+            paramator: integer number of stripes.
         * __`'h_stripe_abs'`__<br>
-            `'$texture_param'`:(integer) size of stripe width.
+            paramator: integer size of stripe width.
         * __`'tl_stripe'`__<br>
-            `'$texture_param'`:(integer) number of stripes.
+            paramator: integer number of stripes.
         * __`'tl_stripe_abs'`__<br>
-            `'$texture_param'`:(integer) size of stripe width.
+            paramator: integer size of stripe width.
         * __`'tr_stripe'`__<br>
-            `'$texture_param'`:(integer) number of stripes.
+            paramator: integer number of stripes.
         * __`'tr_stripe_abs'`__<br>
-            `'$texture_param'`:(integer) size of stripe width.
+            paramator: integer size of stripe width.
     + __`$texture_param`__<br>
         paramator for `$texture`.<br>
         this depends on the type of `$texture`.
