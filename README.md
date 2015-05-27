@@ -242,7 +242,7 @@ one defines color, ohter defines material.
     + __`$texture`__<br>
         set the type of texture.
         * __`'image'`__<br>
-            paramator: string - image url (e.g. `'../../images/stone.png'`).<br>
+            paramator: string - image url (e.g. `$texture_param = '../../images/stone.png'`).<br>
             ![texture image](./images/texture_image.png)
         * __`'flare'`__<br>
             paramator: integer - repeated times of horizontal directional changing.
@@ -257,7 +257,7 @@ one defines color, ohter defines material.
         * __`'tl_stripe'`__<br>
             paramator: integer - number of stripes.
         * __`'tl_stripe_abs'`__<br>
-            paramator: integer - number of pixels of stripe width. (e.g. `2`)<br>
+            paramator: integer - number of pixels of stripe width. (e.g. `$texture_param = 2`)<br>
             ![texture top left stripes](./images/texture_tl_stripe.png)
         * __`'tr_stripe'`__<br>
             paramator: integer - number of stripes.
@@ -268,16 +268,18 @@ one defines color, ohter defines material.
         this depends on the type of `$texture`.
     + __`$texture_opacity`__<br>
         opacity of texture.<br>
-        can not use when value of `$texute` is `'image'`.
+        can not use when `$texute = 'image'`.
     + __`$image_size`__<br>
-        set width and height of image. (e.g. `'300px 300px'`)<br>
-        you should set when chose `'image'` to `'$texture'`.
+        set width and height of image (e.g. `$image_size = '300px 300px'`).<br>
+        you can set when `$texute = 'image'`.
     + __`$bg_color`__<br>
         this color is used with `bg_color()` function.
     + __`$vignette_effect`__<br>
-        opacity of vignette effect.
+        opacity of vignette effect (e.g. `$vignette_effect = .9`).<br>
+        ![texture top left stripes](./images/vignette.png)
     + __`$diffusion`__<br>
-        opacity of white light diffusion.
+        opacity of white light diffusion (e.g. `$diffusion = .8`).<br>
+        ![texture top left stripes](./images/vignette.png)
     + top light reflection
         * __`$top_blend`__<br>
             the amount of white light on top side in reflection.
