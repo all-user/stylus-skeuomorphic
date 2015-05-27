@@ -270,8 +270,7 @@ one defines color, ohter defines material.
         opacity of texture.<br>
         can not use when value of `$texute` is `'image'`.
     + __`$image_size`__<br>
-        set width and height of image as follows.
-        `'300px 300px'`
+        set width and height of image. (e.g. `'300px 300px'`)<br>
         you should set when chose `'image'` to `'$texture'`.
     + __`$bg_color`__<br>
         this color is used with `bg_color()` function.
