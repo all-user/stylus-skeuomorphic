@@ -279,7 +279,7 @@ one defines color, ohter defines material.
         ![texture top left stripes](./images/vignette.png)
     + __`$diffusion`__<br>
         opacity of white light diffusion (e.g. `$diffusion = .8`).<br>
-        ![texture top left stripes](./images/vignette.png)
+        ![texture top left stripes](./images/diffusion.png)
     + top light reflection
         * __`$top_blend`__<br>
             the amount of white light on top side in reflection.
