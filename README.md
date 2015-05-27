@@ -130,15 +130,15 @@ $skeu_prefix = 'my'
 
     - __`$(pre)_skeu_chain`__<br>
         as chinable both sides.<br>
-        ![usual](./images/chain.png)
+        ![chain](./images/chain.png)
 
     - __`$(pre)_skeu_chain_l`__<br>
         as chinable only left side.<br>
-        ![usual](./images/chain_l.png)
+        ![chain left](./images/chain_l.png)
 
     - __`$(pre)_skeu_chain_r`__<br>
         as chinable only right side.<br>
-        ![usual](./images/chain_r.png)
+        ![chain right](./images/chain_r.png)
 
 
 + draw __`$hover`__ placeholders
@@ -159,7 +159,7 @@ $skeu_prefix = 'my'
 
     - __`$(pre)_skeu_active`__<br>
         draw UI defined by __`$active`__.<br>
-        ![usual](./images/active.png)
+        ![active](./images/active.png)
 
 ### Functions
 
@@ -180,7 +180,7 @@ $skeu_prefix = 'my'
 
 + __`circle()`__<br>
     add `border-radius: 50%` CSS style.<br>
-    ![usual](./images/circle.png)
+    ![circle](./images/circle.png)
 
 ### Theme Editing
 
@@ -242,25 +242,27 @@ one defines color, ohter defines material.
     + __`$texture`__<br>
         set the type of texture.
         * __`'image'`__<br>
-            paramator: string - image url (e.g. `'../../images/pattern.png'`).
+            paramator: string - image url (e.g. `'../../images/stone.png'`).<br>
+            ![texture image](./images/texture_image.png)
         * __`'flare'`__<br>
             paramator: integer - repeated times of horizontal directional changing.
         * __`'v_stripe'`__<br>
             paramator: integer - number of stripes.
         * __`'v_stripe_abs'`__<br>
-            paramator: integer - size of stripe width.
+            paramator: integer - number of pixels of stripe width.
         * __`'h_stripe'`__<br>
             paramator: integer - number of stripes.
         * __`'h_stripe_abs'`__<br>
-            paramator: integer - size of stripe width.
+            paramator: integer - number of pixels of stripe width.
         * __`'tl_stripe'`__<br>
             paramator: integer - number of stripes.
         * __`'tl_stripe_abs'`__<br>
-            paramator: integer - size of stripe width.
+            paramator: integer - number of pixels of stripe width. (e.g. `2`)<br>
+            ![texture top left stripes](./images/texture_tl_stripe.png)
         * __`'tr_stripe'`__<br>
             paramator: integer - number of stripes.
         * __`'tr_stripe_abs'`__<br>
-            paramator: integer - size of stripe width.
+            paramator: integer - number of pixels of stripe width.
     + __`$texture_param`__<br>
         paramator for `$texture`.<br>
         this depends on the type of `$texture`.
