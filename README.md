@@ -66,7 +66,7 @@ edit `index.html` and `main.styl`.
 4. edit `main.styl` as follows.
     ```stylus
     $skeu_prefix = 'my'
-    @import '../path_to_theme/gray.styl'
+    @import '../import_theme/gray.styl'
     @import '../../stylus/skeu.styl'
 
     body
@@ -115,7 +115,7 @@ you should assign any strings to __`$skeu_prefix`__ before importing skeu.styl.
 
 ```stylus
 $skeu_prefix = 'my'
-@import 'stylus-skeuomorphic/examples/path_to_theme/gray.styl'
+@import 'stylus-skeuomorphic/examples/import_theme/gray.styl'
 @import 'stylus-skeuomorphic/stylus/skeu.styl'
 
 .my-class
@@ -182,6 +182,24 @@ $skeu_prefix = 'my'
     add `border-radius: 50%` CSS style.<br>
     ![circle](./images/circle.png)
 
+### variables
+
++ __`$material`__<br>
+    assign the path of material defining file.<br>
+    this is loaded in `skeu.styl`.
++ __`$usual`__<br>
+    assign the path of usual color defining file.<br>
+    this is loaded in `skeu.styl`.
++ __`$hover`__<br>
+    assign the path of hover color defining file.<br>
+    this is loaded in `skeu.styl`.
++ __`$active`__<br>
+    assign the path of active color defining file.<br>
+    this is loaded in `skeu.styl`.
++ __`$shadow_length`__<br>
+    length of shadow on bottom side.
++ __`$active_depth`__<br>
+    depth of depressed button when using `$(pre)_skeu_active` placeholder.
 ### Theme Editing
 
 theme consists of two types of `.styl` files.<br>
@@ -289,3 +307,66 @@ one defines color, ohter defines material.
             the amount of white light on bottom side in reflection.
         * __`$bottom_alpha`__<br>
             hiding power to hide the background on bottom side in reflection.
+
+### import theme
+assign the path to file into `$material`, `$usual`, `$hover` and `$active`.
+then import `skeu.styl`.
+`main.styl`
+```stylus
+$skeu_prefix = 'my'
+
+$material = '../../stylus/theme/gray/gray_material.styl'
+$usual = '../../stylus/theme/gray/gray.styl'
+$hover = '../../stylus/theme/gray/gray_hover.styl'
+$active = '../../stylus/theme/gray/gray_active.styl'
+
+@import '../../stylus/skeu.styl'
+```
+
+or, you can create an import file, and read it.
+
+`import_gray.styl`
+```stylus
+$material = '../../stylus/theme/gray/gray_material.styl'
+$usual = '../../stylus/theme/gray/gray.styl'
+$hover = '../../stylus/theme/gray/gray_hover.styl'
+$active = '../../stylus/theme/gray/gray_active.styl'
+```
+`main.styl`
+```stylus
+$skeu_prefix = 'my'
+
+@import './import_gray.styl'
+
+@import '../../stylus/skeu.styl'
+```
+
+## how to use multiple themes
+import another theme that you want and `skeu.styl` with using `@import` keyword.<br>
+you should change prefix when each importing theme.
+
+```stylus
+$skeu_prefix = 'gray'
+@import '../import_theme/gray.styl'
+@import '../../stylus/skeu.styl'
+
+.gray_button
+  @extend gray_skeu
+  &:hover
+    @extend gray_skeu_hover
+  &:active
+    @extend gray_skeu_active
+
+// import another theme...
+
+$skeu_prefix = 'pink'
+@import '../import_theme/pink.styl'
+@import '../../stylus/skeu.styl'
+
+.pink_button
+  @extend pink_skeu
+  &:hover
+    @extend pink_skeu_hover
+  &:active
+    @extend pink_skeu_active
+```
