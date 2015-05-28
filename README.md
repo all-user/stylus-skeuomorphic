@@ -10,7 +10,7 @@ stylus-skeuomorphic require __Node.js__ and __Gulp__.
 
 [__Node.js: nodejs.org__](https://nodejs.org)
 
-install Gulp after Node.js installation.
+install Node.js. then install Gulp with npm.
 
 ```shell
 npm install -g gulp
@@ -309,9 +309,7 @@ one defines color, ohter defines material.
             hiding power to hide the background on bottom side in reflection.
 
 ### import theme
-assign the path to file into `$material`, `$usual`, `$hover` and `$active`.
-then import `skeu.styl`.
-`main.styl`
+assign the path to file into `$material`, `$usual`, `$hover` and `$active`, then import `skeu.styl`.
 ```stylus
 $skeu_prefix = 'my'
 
@@ -341,7 +339,7 @@ $skeu_prefix = 'my'
 @import '../../stylus/skeu.styl'
 ```
 
-## how to use multiple themes
+## import multiple themes
 import another theme that you want and `skeu.styl` with using `@import` keyword.<br>
 you should change prefix when each importing theme.
 
