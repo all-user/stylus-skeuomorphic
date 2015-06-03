@@ -309,7 +309,7 @@ one defines color, ohter defines material.
 ### import theme
 assign the path to file into `$material`, `$usual`, `$hover` and `$active`, then import `skeu.styl`.
 ```stylus
-$skeu_prefix = 'gray'
+$theme_prefix = 'gray'
 
 $material = '../../stylus/theme/gray/gray_material.styl'
 $usual = '../../stylus/theme/gray/gray.styl'
@@ -323,7 +323,7 @@ or, you can create an import file, and read it.
 
 `import_gray.styl`
 ```stylus
-$skeu_prefix = 'gray'
+$theme_prefix = 'gray'
 $material = '../../stylus/theme/gray/gray_material.styl'
 $usual = '../../stylus/theme/gray/gray.styl'
 $hover = '../../stylus/theme/gray/gray_hover.styl'
