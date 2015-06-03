@@ -197,6 +197,7 @@ __`(pre)`__ is replaced name of the theme file.
     length of shadow on bottom side.
 + __`$active_depth`__<br>
     depth of depressed button when using `$(pre)_skeu_active` placeholder.
+
 ### Theme Editing
 
 theme consists of two types of `.styl` files.<br>
