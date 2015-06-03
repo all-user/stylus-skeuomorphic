@@ -1,4 +1,4 @@
-$skeu_prefix ?= ''
+$theme_prefix ?= ''
 @import 'nib'
 
 @import $material
@@ -30,22 +30,22 @@ skeu_common()
   background convert(vignette() + ',' + reflection() + ',' + draw_texture($texture, $texture_param) + ',' + $base_color)
   background-size auto, auto, unquote($image_size)
 
-${$skeu_prefix}_skeu
+${$theme_prefix}_skeu
   skeu_basic()
   skeu_common()
   draw_detail()
 
-${$skeu_prefix}_skeu_chain
+${$theme_prefix}_skeu_chain
   skeu_basic()
   skeu_common()
   draw_detail_chain()
 
-${$skeu_prefix}_skeu_chain_l
+${$theme_prefix}_skeu_chain_l
   skeu_basic()
   skeu_common()
   draw_detail_chain_l()
 
-${$skeu_prefix}_skeu_chain_r
+${$theme_prefix}_skeu_chain_r
   skeu_basic()
   skeu_common()
   draw_detail_chain_r()
@@ -54,19 +54,19 @@ ${$skeu_prefix}_skeu_chain_r
 @import $hover
 @import './var.styl'
 
-${$skeu_prefix}_skeu_hover
+${$theme_prefix}_skeu_hover
   skeu_common()
   draw_detail()
 
-${$skeu_prefix}_skeu_chain_hover
+${$theme_prefix}_skeu_chain_hover
   skeu_common()
   draw_detail_chain()
 
-${$skeu_prefix}_skeu_chain_l_hover
+${$theme_prefix}_skeu_chain_l_hover
   skeu_common()
   draw_detail_chain_l()
 
-${$skeu_prefix}_skeu_chain_r_hover
+${$theme_prefix}_skeu_chain_r_hover
   skeu_common()
   draw_detail_chain_r()
 
@@ -74,7 +74,7 @@ ${$skeu_prefix}_skeu_chain_r_hover
 @import $active
 @import './var.styl'
 
-${$skeu_prefix}_skeu_active
+${$theme_prefix}_skeu_active
   top $active_depth
   skeu_common()
   draw_pushed()
