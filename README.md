@@ -65,7 +65,6 @@ edit `index.html` and `main.styl`.
 
 4. edit `main.styl` as follows.
     ```stylus
-    $skeu_prefix = 'my'
     @import '../import_theme/gray.styl'
     @import '../../stylus/skeu.styl'
 
@@ -74,14 +73,14 @@ edit `index.html` and `main.styl`.
       margin 20%
 
     .my-class
-      @extend $my_skeu
+      @extend $gray_skeu
       padding .5em
       font-size 50px
       font-family sans-serif
       &:hover
-        @extend $my_skeu_hover
+        @extend $gray_skeu_hover
       &:active
-        @extend $my_skeu_active
+        @extend $gray_skeu_active
     ```
 
 ### compile
@@ -110,16 +109,14 @@ you can use these objects in your project.
 ### Placeholder
 
 use __`@extend`__ keyword to use placeholder.<br>
-__`(pre)`__ is replaced __`$skeu_prefix`__.<br>
-you should assign any strings to __`$skeu_prefix`__ before importing skeu.styl.
+__`(pre)`__ is replaced name of the theme file.
 
 ```stylus
-$skeu_prefix = 'my'
 @import 'stylus-skeuomorphic/examples/import_theme/gray.styl'
 @import 'stylus-skeuomorphic/stylus/skeu.styl'
 
 .my-class
-  @extend $my_skeu
+  @extend $gray_skeu
 ```
 
 + draw __`$usual`__ placeholders
@@ -311,7 +308,7 @@ one defines color, ohter defines material.
 ### import theme
 assign the path to file into `$material`, `$usual`, `$hover` and `$active`, then import `skeu.styl`.
 ```stylus
-$skeu_prefix = 'my'
+$skeu_prefix = 'gray'
 
 $material = '../../stylus/theme/gray/gray_material.styl'
 $usual = '../../stylus/theme/gray/gray.styl'
@@ -325,6 +322,7 @@ or, you can create an import file, and read it.
 
 `import_gray.styl`
 ```stylus
+$skeu_prefix = 'gray'
 $material = '../../stylus/theme/gray/gray_material.styl'
 $usual = '../../stylus/theme/gray/gray.styl'
 $hover = '../../stylus/theme/gray/gray_hover.styl'
@@ -332,19 +330,14 @@ $active = '../../stylus/theme/gray/gray_active.styl'
 ```
 `main.styl`
 ```stylus
-$skeu_prefix = 'my'
-
 @import './import_gray.styl'
-
 @import '../../stylus/skeu.styl'
 ```
 
 ## import multiple themes
-import another theme that you want and `skeu.styl` with using `@import` keyword.<br>
-you should change prefix when each importing theme.
+import another theme that you want and `skeu.styl` with using `@import` keyword.
 
 ```stylus
-$skeu_prefix = 'gray'
 @import '../import_theme/gray.styl'
 @import '../../stylus/skeu.styl'
 
@@ -355,9 +348,9 @@ $skeu_prefix = 'gray'
   &:active
     @extend gray_skeu_active
 
+
 // import another theme...
 
-$skeu_prefix = 'pink'
 @import '../import_theme/pink.styl'
 @import '../../stylus/skeu.styl'
 
