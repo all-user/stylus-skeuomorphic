@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <script>
         document.addEventListener('DOMContentLoaded', function(e) {
-            var play         = document.getElementById('play-input');
-            var rec          = document.getElementById('rec-input');
-            var stop         = document.getElementById('stop');
-            var forward      = document.getElementById('forward');
-            var backward     = document.getElementById('backward');
-            var fastForward  = document.getElementById('fast-forward');
-            var fastBackward = document.getElementById('fast-backward');
+            var play         = document.getElementById('stylus-skeu-2-play-input');
+            var rec          = document.getElementById('stylus-skeu-2-rec-input');
+            var stop         = document.getElementById('stylus-skeu-2-stop');
+            var forward      = document.getElementById('stylus-skeu-2-forward');
+            var backward     = document.getElementById('stylus-skeu-2-backward');
+            var fastForward  = document.getElementById('stylus-skeu-2-fast-forward');
+            var fastBackward = document.getElementById('stylus-skeu-2-fast-backward');
 
             var resetRec = function(e) {
                 rec.checked = false;
@@ -36,14 +36,16 @@
     </script>
 </head>
 <body>
-    <div id="wrapper">
-        <div class="skeu pink" id="fast-backward"><i class="fa fa-fast-backward"></i>
-        </div><div class="skeu pink" id="backward"><i class="fa fa-backward"></i>
-        </div><div class="skeu pink" id="stop"><i class="fa fa-stop"></i>
-        </div><input type="checkbox" id="play-input"><label class="skeu pink" id="play" for="play-input"><i class="fa fa-play"></i>
-        </label><input type="checkbox" id="rec-input"><label class="skeu pink" id="rec" for="rec-input"><i class="fa fa-circle"></i>
-        </label><div class="skeu pink" id="forward"><i class="fa fa-forward"></i>
-        </div><div class="skeu pink" id="fast-forward"><i class="fa fa-fast-forward"></i></div>
+    <div id="stylus-skeu-2-background">
+        <div id="stylus-skeu-2-wrapper">
+            <div class="stylus-skeu-2-skeu stylus-skeu-2-pink" id="stylus-skeu-2-fast-backward"><i class="fa fa-fast-backward"></i>
+            </div><div class="stylus-skeu-2-skeu stylus-skeu-2-pink" id="stylus-skeu-2-backward"><i class="fa fa-backward"></i>
+            </div><div class="stylus-skeu-2-skeu stylus-skeu-2-pink" id="stylus-skeu-2-stop"><i class="fa fa-stop"></i>
+            </div><input type="checkbox" id="stylus-skeu-2-play-input"><label class="stylus-skeu-2-skeu stylus-skeu-2-pink" id="stylus-skeu-2-play" for="stylus-skeu-2-play-input"><i class="fa fa-play"></i>
+            </label><input type="checkbox" id="stylus-skeu-2-rec-input"><label class="stylus-skeu-2-skeu stylus-skeu-2-pink" id="stylus-skeu-2-rec" for="stylus-skeu-2-rec-input"><i class="fa fa-circle"></i>
+            </label><div class="stylus-skeu-2-skeu stylus-skeu-2-pink" id="stylus-skeu-2-forward"><i class="fa fa-forward"></i>
+            </div><div class="stylus-skeu-2-skeu stylus-skeu-2-pink" id="stylus-skeu-2-fast-forward"><i class="fa fa-fast-forward"></i></div>
+        </div>
     </div>
 </body>
 </html>

@@ -5,22 +5,24 @@ $skeu_prefix = 'pink'
 @import '../import_theme/pink.styl'
 @import '../../stylus/skeu.styl'
 
-body
+
+#stylus-skeu-2-background
+  size 100% auto
   margin 0
-  padding 0
+  padding 100px 0
   position relative
   text-align center
+  overflow-x scroll
   bg_color()
-  min-height 100vh
 
-#wrapper
+#stylus-skeu-2-wrapper
   display inline-block
-  size 560px 60px
+  size 100.5% auto
   padding 0
   margin auto
-  absolute top 0 bottom 0 right 0 left 0
+  position relative
 
-.pink
+.stylus-skeu-2-pink
   @extend $pink_skeu_chain
   color black
   &:hover
@@ -28,7 +30,7 @@ body
   &:active
     @extend $pink_skeu_active
 
-.pink:nth-child(1)
+.stylus-skeu-2-pink:nth-child(1)
   @extend $pink_skeu_chain_r
   color black
   &:hover
@@ -36,7 +38,7 @@ body
   &:active
     @extend $pink_skeu_active
 
-.pink:nth-last-child(1)
+.stylus-skeu-2-pink:nth-last-child(1)
   @extend $pink_skeu_chain_l
   color black
   &:hover
@@ -44,7 +46,7 @@ body
   &:active
     @extend $pink_skeu_active
 
-.pink.skeu
+.stylus-skeu-2-pink.stylus-skeu-2-skeu
   box-sizing border-box
   display inline-block
   size 80px auto
@@ -54,31 +56,31 @@ body
   margin 0
   border-right 1px solid #555
 
-.pink.skeu:nth-last-child(1)
+.stylus-skeu-2-pink.stylus-skeu-2-skeu:nth-last-child(1)
   border-right none
 
-#rec-input
+#stylus-skeu-2-rec-input
   display none
-  & + #rec
+  & + #stylus-skeu-2-rec
     color #c50
     &:active
       top 2px
-  &:checked + #rec
+  &:checked + #stylus-skeu-2-rec
     @extend $pink_skeu_active
     top 1px
     color #f50
-  &:checked + #rec:active
+  &:checked + #stylus-skeu-2-rec:active
     top 2px
 
-#play-input
+#stylus-skeu-2-play-input
   display none
-  & + #play
+  & + #stylus-skeu-2-play
     color #58a
     &:active
       top 2px
-  &:checked + #play
+  &:checked + #stylus-skeu-2-play
     @extend $pink_skeu_active
     top 1px
     color #0a9
-  &:checked + #play:active
+  &:checked + #stylus-skeu-2-play:active
     top 2px
