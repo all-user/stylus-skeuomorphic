@@ -338,8 +338,13 @@ $active = '../../stylus/theme/gray/gray_active.styl'
 ## import multiple themes
 import another theme that you want and `skeu.styl` with using `@import` keyword.
 
+
 ```stylus
 @import '../import_theme/gray.styl'
+@import '../../stylus/skeu.styl'
+
+// import another theme...
+@import '../import_theme/pink.styl'
 @import '../../stylus/skeu.styl'
 
 .gray_button
@@ -348,12 +353,6 @@ import another theme that you want and `skeu.styl` with using `@import` keyword.
     @extend gray_skeu_hover
   &:active
     @extend gray_skeu_active
-
-
-// import another theme...
-
-@import '../import_theme/pink.styl'
-@import '../../stylus/skeu.styl'
 
 .pink_button
   @extend pink_skeu

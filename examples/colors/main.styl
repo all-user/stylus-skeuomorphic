@@ -4,6 +4,27 @@ $active_depth  = 1px
 @import '../import_theme/gray.styl'
 @import '../../stylus/skeu.styl'
 
+@import '../import_theme/pink.styl'
+@import '../../stylus/skeu.styl'
+
+$image_size = '300px 300px'
+$texture_param = '../../images/pattern.png'
+@import '../import_theme/purple.styl'
+@import '../../stylus/skeu.styl'
+
+$texture_param = '../../images/canvas.png'
+@import '../import_theme/yellow.styl'
+@import '../../stylus/skeu.styl'
+
+@import '../import_theme/green.styl'
+@import '../../stylus/skeu.styl'
+
+@import '../import_theme/blue.styl'
+@import '../../stylus/skeu.styl'
+
+@import '../import_theme/red.styl'
+@import '../../stylus/skeu.styl'
+
 body
   background white
   text-align center
@@ -16,9 +37,6 @@ body
   &:active
     @extend $gray_skeu_active
 
-@import '../import_theme/pink.styl'
-@import '../../stylus/skeu.styl'
-
 .pink
   @extend $pink_skeu_chain
   border-right 1px solid #555
@@ -26,11 +44,6 @@ body
     @extend $pink_skeu_chain_hover
   &:active
     @extend $pink_skeu_active
-
-$image_size = '300px 300px'
-$texture_param = '../../images/pattern.png'
-@import '../import_theme/purple.styl'
-@import '../../stylus/skeu.styl'
 
 .purple
   @extend $purple_skeu_chain
@@ -40,10 +53,6 @@ $texture_param = '../../images/pattern.png'
   &:active
     @extend $purple_skeu_active
 
-$texture_param = '../../images/canvas.png'
-@import '../import_theme/yellow.styl'
-@import '../../stylus/skeu.styl'
-
 .yellow
   @extend $yellow_skeu_chain
   border-right 1px solid #555
@@ -51,9 +60,6 @@ $texture_param = '../../images/canvas.png'
     @extend $yellow_skeu_chain_hover
   &:active
     @extend $yellow_skeu_active
-
-@import '../import_theme/green.styl'
-@import '../../stylus/skeu.styl'
 
 .green
   @extend $green_skeu_chain
@@ -63,9 +69,6 @@ $texture_param = '../../images/canvas.png'
   &:active
     @extend $green_skeu_active
 
-@import '../import_theme/blue.styl'
-@import '../../stylus/skeu.styl'
-
 .blue
   @extend $blue_skeu_chain
   border-right 1px solid #555
@@ -73,9 +76,6 @@ $texture_param = '../../images/canvas.png'
     @extend $blue_skeu_chain_hover
   &:active
     @extend $blue_skeu_active
-
-@import '../import_theme/red.styl'
-@import '../../stylus/skeu.styl'
 
 .red
   @extend $red_skeu_chain_l
