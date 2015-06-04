@@ -311,10 +311,10 @@ assign the path to file into `$material`, `$usual`, `$hover` and `$active`, then
 ```stylus
 $theme_prefix = 'gray'
 
-$material = '../../stylus/theme/gray/gray_material.styl'
-$usual = '../../stylus/theme/gray/gray.styl'
-$hover = '../../stylus/theme/gray/gray_hover.styl'
-$active = '../../stylus/theme/gray/gray_active.styl'
+$material = '../../stylus/theme/gray/gray_material.styl' // material file
+$usual = '../../stylus/theme/gray/gray.styl'             // color file
+$hover = '../../stylus/theme/gray/gray_hover.styl'       // color file
+$active = '../../stylus/theme/gray/gray_active.styl'     // color file
 
 @import '../../stylus/skeu.styl'
 ```
@@ -348,16 +348,16 @@ import another theme that you want and `skeu.styl` with using `@import` keyword.
 @import '../../stylus/skeu.styl'
 
 .gray_button
-  @extend gray_skeu
+  @extend $gray_skeu
   &:hover
-    @extend gray_skeu_hover
+    @extend $gray_skeu_hover
   &:active
-    @extend gray_skeu_active
+    @extend $gray_skeu_active
 
 .pink_button
-  @extend pink_skeu
+  @extend $pink_skeu
   &:hover
-    @extend pink_skeu_hover
+    @extend $pink_skeu_hover
   &:active
-    @extend pink_skeu_active
+    @extend $pink_skeu_active
 ```
