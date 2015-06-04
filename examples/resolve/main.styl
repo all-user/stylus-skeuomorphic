@@ -1,0 +1,46 @@
+@import '../import_theme/pink.styl'
+@import '../../stylus/skeu.styl'
+
+#stylus-skeu-2-resolve-bg
+  display block
+  position relative
+  size 100% auto
+  margin 0
+  padding 100px 0
+  bg_color()
+  text-align center
+  #stylus-skeu-2-resolve-wrapper
+    display inline-block
+    position relative
+    size 100.5% auto
+    margin 0 auto
+    padding 0
+
+    & > div
+      display inline-block
+      absolute top 0 left 0
+      border-radius 50%
+      box-sizing border-box
+      size 100px 100px
+      margin 0 -50px 0 0
+    #stylus-skeu-2-text
+      z-index 500
+      color #58a
+      draw_text()
+    #stylus-skeu-2-detail
+      z-index 400
+      draw_detail()
+    #stylus-skeu-2-vignette
+      z-index 300
+      background convert(vignette())
+    #stylus-skeu-2-reflection
+      z-index 200
+      background convert(reflection())
+    #stylus-skeu-2-texture
+      z-index 100
+      background convert(draw_texture($texture, $texture_param))
+    #stylus-skeu-2-basecolor
+      z-index 0
+      background $base_color
+
+
