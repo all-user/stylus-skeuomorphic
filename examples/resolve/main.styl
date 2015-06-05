@@ -1,10 +1,15 @@
 @import '../import_theme/pink.styl'
 @import '../../stylus/skeu.styl'
 
+$adjust = 50px
+$resolve_duration = 1500ms
+$resolve_size = 80px
+
 #stylus-skeu-2-resolve-bg
   display block
   position relative
   size 100% auto
+  overflow-x scroll
   margin 0
   padding 100px 0
   bg_color()
@@ -12,33 +17,53 @@
   #stylus-skeu-2-resolve-wrapper
     display inline-block
     position relative
-    size 100.5% auto
+    size 100.5% ($adjust * 4 + $resolve_size)
     margin 0 auto
     padding 0
-
     & > div
       display inline-block
-      absolute top 0 left 0
+      position relative
       border-radius 50%
       box-sizing border-box
-      size 100px 100px
-      margin 0 -50px 0 0
+      size $resolve_size $resolve_size
+      margin 0 (-(@width / 2))
+      vertical-align top
+      top 0
+      transition $resolve_duration top, $resolve_duration margin
+    &:hover > div
+      size $resolve_size $resolve_size
+      margin 0 (-((@width - $adjust) / 2))
     #stylus-skeu-2-text
       z-index 500
       color #58a
       draw_text()
+      & > i
+        color #58a
+        font-size ($resolve_size / 3)
+        line-height @font-size
+        relative top @font-size
+    &:hover #stylus-skeu-2-text
+      top $adjust * 5
     #stylus-skeu-2-detail
       z-index 400
       draw_detail()
+    &:hover #stylus-skeu-2-detail
+      top $adjust * 4
     #stylus-skeu-2-vignette
       z-index 300
       background convert(vignette())
+    &:hover #stylus-skeu-2-vignette
+      top $adjust * 3
     #stylus-skeu-2-reflection
       z-index 200
       background convert(reflection())
+    &:hover #stylus-skeu-2-reflection
+      top $adjust * 2
     #stylus-skeu-2-texture
       z-index 100
       background convert(draw_texture($texture, $texture_param))
+    &:hover #stylus-skeu-2-texture
+      top $adjust
     #stylus-skeu-2-basecolor
       z-index 0
       background $base_color
