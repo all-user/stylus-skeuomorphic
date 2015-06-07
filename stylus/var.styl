@@ -14,19 +14,19 @@ if $saturation_mod < 0
 $base_color = spin($base_color, $spin_mod)
 
 // generate tones
-$$indirect_light_base = blend(rgba(spin(complement($theme_color), $spin_mod), .2), saturate(darken($theme_color, 5), 9))
-$edge_reflected   = rgba(255,255,255,.2)
-$middle_tone      = saturate(blend(lighten(rgba(spin(complement($base_color), $spin_mod*3), .3), 5%), lighten($base_color, 10%)), 3)
-$top_highlight    = rgba(255,255,255,1)
-$bottom_shadow    = black
-$bottom_reflected = rgba(255,255,255,.8)
-$indirect_light   = rgba($$indirect_light_base, .6)
-$indirect_shadow  = rgba(0,0,0,.25)
-$inner_reflection = rgba(255,255,255,$diffusion)
-$top_saturator    = hsla(hue($theme_color) - $spin_mod*5, 100%, 11%, 1)
-$top_inner_light  = rgba(255,255,255,.03)
-$top_reflected    = transparentify(blend(rgba($$indirect_light_base, .1), $theme_color), .8)
-$bottom_tone      = rgba(0,0,0,.4)
+$indirect_base     = blend(rgba(spin(complement($theme_color), $spin_mod), .2), saturate(darken($theme_color, 5), 9))
+$edge_reflection   = rgba(255,255,255,.2)
+$middle_tone       = saturate(blend(lighten(rgba(spin(complement($base_color), $spin_mod*3), .3), 5%), lighten($base_color, 10%)), 3)
+$top_highlight     = rgba(255,255,255,1)
+$bottom_shadow     = black
+$bottom_reflection = rgba(255,255,255,.8)
+$indirect_light    = rgba($indirect_base, .6)
+$indirect_shadow   = rgba(0,0,0,.25)
+$inner_reflection  = rgba(255,255,255, $diffusion)
+$top_saturator     = hsla(hue($theme_color) - $spin_mod*5, 100%, 11%, 1)
+$top_inner_light   = rgba(255,255,255,.03)
+$top_reflection    = transparentify(blend(rgba($indirect_base, .1), $theme_color), .8)
+$bottom_tone       = rgba(0,0,0,.4)
 
 // details
 $shadow_length ?= 10px
