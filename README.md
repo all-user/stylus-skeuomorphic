@@ -119,11 +119,11 @@ __`(pre)`__ is replaced name of the theme file.
   @extend $gray_skeu
 ```
 
-+ draw __`$usual`__ placeholders
++ draw __`$normal`__ placeholders
 
     - __`$(pre)_skeu`__<br>
-        draw UI defined by __`$usual`__.<br>
-        ![usual](./images/usual.png)
+        draw UI defined by __`$normal`__.<br>
+        ![normal](./images/normal.png)
 
     - __`$(pre)_skeu_chain`__<br>
         as chinable both sides.<br>
@@ -184,8 +184,8 @@ __`(pre)`__ is replaced name of the theme file.
 + __`$material`__<br>
     assign the path of material defining file.<br>
     this is loaded in `skeu.styl`.
-+ __`$usual`__<br>
-    assign the path of usual color defining file.<br>
++ __`$normal`__<br>
+    assign the path of normal color defining file.<br>
     this is loaded in `skeu.styl`.
 + __`$hover`__<br>
     assign the path of hover color defining file.<br>
@@ -307,12 +307,12 @@ one defines color, ohter defines material.
             hiding power to hide the background on bottom side in reflection.
 
 ### import theme
-assign the path to file into `$material`, `$usual`, `$hover` and `$active`, then import `skeu.styl`.
+assign the path to file into `$material`, `$normal`, `$hover` and `$active`, then import `skeu.styl`.
 ```stylus
 $theme_prefix = 'gray'
 
 $material = '../../stylus/theme/gray/gray_material.styl' // material file
-$usual = '../../stylus/theme/gray/gray.styl'             // color file
+$normal = '../../stylus/theme/gray/gray.styl'             // color file
 $hover = '../../stylus/theme/gray/gray_hover.styl'       // color file
 $active = '../../stylus/theme/gray/gray_active.styl'     // color file
 
@@ -325,7 +325,7 @@ or, you can create an import file, and read it.
 ```stylus
 $theme_prefix = 'gray'
 $material = '../../stylus/theme/gray/gray_material.styl'
-$usual = '../../stylus/theme/gray/gray.styl'
+$normal = '../../stylus/theme/gray/gray.styl'
 $hover = '../../stylus/theme/gray/gray_hover.styl'
 $active = '../../stylus/theme/gray/gray_active.styl'
 ```
