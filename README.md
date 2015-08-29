@@ -310,11 +310,10 @@ one defines color, ohter defines material.
 assign the path to file into `$material`, `$normal`, `$hover` and `$active`, then import `skeu.styl`.
 ```stylus
 $theme_prefix = 'gray'
-
-$material = '../../stylus/theme/gray/gray_material.styl' // material file
-$normal = '../../stylus/theme/gray/gray.styl'             // color file
-$hover = '../../stylus/theme/gray/gray_hover.styl'       // color file
-$active = '../../stylus/theme/gray/gray_active.styl'     // color file
+$material = '../../stylus/theme/gray/material.styl' // material file
+$normal   = '../../stylus/theme/gray/normal.styl'   // color file
+$hover    = '../../stylus/theme/gray/hover.styl'    // color file
+$active   = '../../stylus/theme/gray/active.styl'   // color file
 
 @import '../../stylus/skeu.styl'
 ```
@@ -324,10 +323,10 @@ or, you can create an import file, and read it.
 `import_gray.styl`
 ```stylus
 $theme_prefix = 'gray'
-$material = '../../stylus/theme/gray/gray_material.styl'
-$normal = '../../stylus/theme/gray/gray.styl'
-$hover = '../../stylus/theme/gray/gray_hover.styl'
-$active = '../../stylus/theme/gray/gray_active.styl'
+$material     = '../../stylus/theme/gray/material.styl'
+$normal       = '../../stylus/theme/gray/normal.styl'
+$hover        = '../../stylus/theme/gray/hover.styl'
+$active       = '../../stylus/theme/gray/active.styl'
 ```
 `main.styl`
 ```stylus
