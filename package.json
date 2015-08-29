@@ -31,6 +31,5 @@
   "devDependencies": {
     "coffee-script": "*"
   },
-  "author": "",
   "license": "MIT"
 }
