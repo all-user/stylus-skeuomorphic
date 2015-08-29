@@ -12,3 +12,5 @@ gulp.task 'stylus:blog', ->
   gulp.src './examples/**/main*.styl'
     .pipe stylus(use: [nib()])
     .pipe gulp.dest '/workspace/all-user.org/memowomome/css/css-skeu/'
+
+gulp.task 'default', ['stylus']
