@@ -1,0 +1,19 @@
+{
+  "duration": "100ms",
+  "texture": {
+    "type": "image",
+    "src": "../../images/pattern.png",
+    "size": "300px 300px"
+  },
+  "bg_color": "#ccd",
+  "vignette_effect": 0.3,
+  "diffusion": 0.1,
+  "top": {
+    "blend": 0.25,
+    "alpha": 0.8
+  },
+  "bottom": {
+    "blend": 0.15,
+    "alpha": 0.5
+  }
+}

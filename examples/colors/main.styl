@@ -25,71 +25,76 @@ $texture_param = '../../images/canvas.png'
 @import '../_import_theme/red.styl'
 @import '../../stylus/skeu.styl'
 
+*
+  box-sizing border-box
+
 body
   background white
   text-align center
 
+$h = 36px
+
 .gray
-  @extend $gray_skeu_chain_r
+  $gray_skeu_chain_r($h)
   border-right 1px solid #555
   &:hover
-    @extend $gray_skeu_chain_r_hover
+    $gray_skeu_chain_r_hover($h)
   &:active
-    @extend $gray_skeu_active
+    $gray_skeu_active($h)
 
 .pink
-  @extend $pink_skeu_chain
+  $pink_skeu_chain($h)
   border-right 1px solid #555
   &:hover
-    @extend $pink_skeu_chain_hover
+    $pink_skeu_chain_hover($h)
   &:active
-    @extend $pink_skeu_active
+    $pink_skeu_active($h)
 
 .purple
-  @extend $purple_skeu_chain
+  $purple_skeu_chain($h)
   border-right 1px solid #555
   &:hover
-    @extend $purple_skeu_chain_hover
+    $purple_skeu_chain_hover($h)
   &:active
-    @extend $purple_skeu_active
+    $purple_skeu_active($h)
 
 .yellow
-  @extend $yellow_skeu_chain
+  $yellow_skeu_chain($h)
   border-right 1px solid #555
   &:hover
-    @extend $yellow_skeu_chain_hover
+    $yellow_skeu_chain_hover($h)
   &:active
-    @extend $yellow_skeu_active
+    $yellow_skeu_active($h)
 
 .green
-  @extend $green_skeu_chain
+  $green_skeu_chain($h)
   border-right 1px solid #555
   &:hover
-    @extend $green_skeu_chain_hover
+    $green_skeu_chain_hover($h)
   &:active
-    @extend $green_skeu_active
+    $green_skeu_active($h)
 
 .blue
-  @extend $blue_skeu_chain
+  $blue_skeu_chain($h)
   border-right 1px solid #555
   &:hover
-    @extend $blue_skeu_chain_hover
+    $blue_skeu_chain_hover($h)
   &:active
-    @extend $blue_skeu_active
+    $blue_skeu_active($h)
 
 .red
-  @extend $red_skeu_chain_l
+  $red_skeu_chain_l($h)
   &:hover
-    @extend $red_skeu_chain_l_hover
+    $red_skeu_chain_l_hover($h)
   &:active
-    @extend $red_skeu_active
+    $red_skeu_active($h)
 
 .skeu
   display inline-block
-  size auto auto
-  font-size 30px
-  line-height 35px
-  font-weight 100
-  padding 15px 45px
+  size auto $h
+  font-size 16px
+  line-height 16px
+  font-weight 400
+  padding 10px 10px
   margin 10px 0
   font-family "Helvetica Neue", sans-serif

@@ -1,81 +1,96 @@
-draw_detail()
-  box-shadow:
-    -1px   0px   0px   0px $edge_reflection   inset,
-    -4px   0px   2px  -2px $middle_tone       inset,
-     1px   0px   0px   0px $edge_reflection   inset,
-     4px   0px   2px  -2px $middle_tone       inset,
-     0px   1px   0px   0px $middle_tone       inset,
-     0px   2px   0px   0px $top_highlight     inset,
-     0px  -1px   0px   0px $bottom_shadow     inset,
-     0px -10px   5px  -8px $bottom_reflection inset,
-     0px   0px  30px   5px $indirect_light    inset,
-     0px   0px  30px   5px $indirect_shadow   inset,
-     0px   0px  40px  15px $inner_reflection  inset,
-     0px   5px   5px  -5px $top_saturator     inset,
-     0px   5px   5px   0px $top_inner_light   inset,
-     0px  -5px   0px   0px $bottom_tone       inset,
-     0px  $shadow_length 5px   0px $drop_shadow;
+@import './vars.styl'
 
-draw_detail_chain()
-  box-shadow:
-     0px   1px   0px   0px $middle_tone       inset,
-     0px   2px   0px   0px $top_highlight     inset,
-     0px  -1px   0px   0px $bottom_shadow     inset,
-     0px -10px   5px  -8px $bottom_reflection inset,
-     0px   0px  30px   5px $indirect_light    inset,
-     0px   0px  30px   5px $indirect_shadow   inset,
-     0px   0px  40px  15px $inner_reflection  inset,
-     0px   5px   5px  -5px $top_saturator     inset,
-     0px   5px   5px   0px $top_inner_light   inset,
-     0px  -5px   0px   0px $bottom_tone       inset,
-     0px  $shadow_length 5px   0px $drop_shadow;
+__scale($height, $default)
+  ret = $default
+  ret = $height * (-10px / 60px) if $height
+  return ret
 
-draw_detail_chain_l()
-  box-shadow:
-    -1px   0px   0px   0px $edge_reflection   inset,
-    -4px   0px   2px  -2px $middle_tone       inset,
-     0px   1px   0px   0px $middle_tone       inset,
-     0px   2px   0px   0px $top_highlight     inset,
-     0px  -1px   0px   0px $bottom_shadow     inset,
-     0px -10px   5px  -8px $bottom_reflection inset,
-     0px   0px  30px   5px $indirect_light    inset,
-     0px   0px  30px   5px $indirect_shadow   inset,
-     0px   0px  40px  15px $inner_reflection  inset,
-     0px   5px   5px  -5px $top_saturator     inset,
-     0px   5px   5px   0px $top_inner_light   inset,
-     0px  -5px   0px   0px $bottom_tone       inset,
-     0px  $shadow_length 5px   0px $drop_shadow;
+__draw_detail($material, $state, $options)
+  h = $options.height
+  vars = __vars($material, $state)
+  val = -1px   0px   0px   0px vars.edge_reflection inset,
+    -4px   0px   2px  -2px vars.middle_tone     inset,
+    1px   0px   0px   0px vars.edge_reflection inset,
+    4px   0px   2px  -2px vars.middle_tone     inset,
+    0px   1px   0px   0px vars.middle_tone     inset,
+    0px   2px   0px   0px vars.top_highlight   inset,
+    0px  -1px   0px   0px vars.bottom_shadow   inset,
+    0px __scale(h, -10px) 5px  -8px vars.bottom_reflection inset,
+    0px   0px  30px   5px vars.indirect_light  inset,
+    0px   0px  30px   5px vars.indirect_shadow inset,
+    0px   0px  40px  15px vars.inner_reflection inset,
+    0px   5px   5px  -5px vars.top_saturator   inset,
+    0px   5px   5px   0px vars.top_inner_light inset,
+    0px  -5px   0px   0px vars.bottom_tone     inset,
+    0px  vars.shadow_length 5px   0px vars.drop_shadow
+  return { box-shadow: val }
 
-draw_detail_chain_r()
-  box-shadow:
-     1px   0px   0px   0px $edge_reflection   inset,
-     4px   0px   2px  -2px $middle_tone       inset,
-     0px   1px   0px   0px $middle_tone       inset,
-     0px   2px   0px   0px $top_highlight     inset,
-     0px  -1px   0px   0px $bottom_shadow     inset,
-     0px -10px   5px  -8px $bottom_reflection inset,
-     0px   0px  30px   5px $indirect_light    inset,
-     0px   0px  30px   5px $indirect_shadow   inset,
-     0px   0px  40px  15px $inner_reflection  inset,
-     0px   5px   5px  -5px $top_saturator     inset,
-     0px   5px   5px   0px $top_inner_light   inset,
-     0px  -5px   0px   0px $bottom_tone       inset,
-     0px  $shadow_length 5px   0px $drop_shadow;
 
-draw_pushed()
-  box-shadow:
-     0px   3px   0px   0px $indirect_light   inset,
-     0px   4px   0px   0px $bottom_shadow    inset,
-    -2px   0px   2px   0px $indirect_shadow  inset,
-    -4px   0px   4px  -2px $base_color       inset,
-     2px   0px   2px   0px $indirect_shadow  inset,
-     4px   0px   4px  -2px $base_color       inset,
-     0px   1px   0px   0px $middle_tone      inset,
-     0px  -1px  15px   0px $middle_tone      inset,
-     0px   0px  30px   5px $indirect_light   inset,
-     0px   0px  30px   5px $indirect_shadow  inset,
-     0px   0px  40px  15px $inner_reflection inset,
-     0px   5px   5px  -5px $top_saturator    inset,
-     0px   5px   5px   0px $bottom_tone      inset,
-     0px  -5px  20px  -5px $bottom_shadow    inset,
-     0px   1px   2px   0px $edge_reflection;
+__draw_detail_chain($material, $state)
+  vars = __vars($material, $state)
+  val = 0px   1px   0px   0px vars.middle_tone       inset,
+    0px   2px   0px   0px vars.top_highlight     inset,
+    0px  -1px   0px   0px vars.bottom_shadow     inset,
+    0px -10px   5px  -8px vars.bottom_reflection inset,
+    0px   0px  30px   5px vars.indirect_light    inset,
+    0px   0px  30px   5px vars.indirect_shadow   inset,
+    0px   0px  40px  15px vars.inner_reflection  inset,
+    0px   5px   5px  -5px vars.top_saturator     inset,
+    0px   5px   5px   0px vars.top_inner_light   inset,
+    0px  -5px   0px   0px vars.bottom_tone       inset,
+    0px  vars.shadow_length 5px   0px vars.drop_shadow
+  return { box-shadow: val }
+
+__draw_detail_chain_l($material, $state)
+  vars = __vars($material, $state)
+  val = -1px   0px   0px   0px vars.edge_reflection   inset,
+    -4px   0px   2px  -2px vars.middle_tone       inset,
+    0px   1px   0px   0px vars.middle_tone       inset,
+    0px   2px   0px   0px vars.top_highlight     inset,
+    0px  -1px   0px   0px vars.bottom_shadow     inset,
+    0px -10px   5px  -8px vars.bottom_reflection inset,
+    0px   0px  30px   5px vars.indirect_light    inset,
+    0px   0px  30px   5px vars.indirect_shadow   inset,
+    0px   0px  40px  15px vars.inner_reflection  inset,
+    0px   5px   5px  -5px vars.top_saturator     inset,
+    0px   5px   5px   0px vars.top_inner_light   inset,
+    0px  -5px   0px   0px vars.bottom_tone       inset,
+    0px  vars.shadow_length 5px   0px vars.drop_shadow
+  return { box-shadow: val }
+
+
+__draw_detail_chain_r($material, $state)
+  vars = __vars($material, $state)
+  val = 1px   0px   0px   0px vars.edge_reflection   inset,
+    4px   0px   2px  -2px vars.middle_tone       inset,
+    0px   1px   0px   0px vars.middle_tone       inset,
+    0px   2px   0px   0px vars.top_highlight     inset,
+    0px  -1px   0px   0px vars.bottom_shadow     inset,
+    0px -10px   5px  -8px vars.bottom_reflection inset,
+    0px   0px  30px   5px vars.indirect_light    inset,
+    0px   0px  30px   5px vars.indirect_shadow   inset,
+    0px   0px  40px  15px vars.inner_reflection  inset,
+    0px   5px   5px  -5px vars.top_saturator     inset,
+    0px   5px   5px   0px vars.top_inner_light   inset,
+    0px  -5px   0px   0px vars.bottom_tone       inset,
+    0px  vars.shadow_length 5px   0px vars.drop_shadow
+  return { box-shadow: val }
+
+__draw_pushed($material, $state)
+  vars = __vars($material, $state)
+  val = 0px   3px   0px   0px vars.indirect_light   inset,
+    0px   4px   0px   0px vars.bottom_shadow    inset,
+    -2px   0px   2px   0px vars.indirect_shadow  inset,
+    -4px   0px   4px  -2px vars.base_color       inset,
+    2px   0px   2px   0px vars.indirect_shadow  inset,
+    4px   0px   4px  -2px vars.base_color       inset,
+    0px   1px   0px   0px vars.middle_tone      inset,
+    0px  -1px  15px   0px vars.middle_tone      inset,
+    0px   0px  30px   5px vars.indirect_light   inset,
+    0px   0px  30px   5px vars.indirect_shadow  inset,
+    0px   0px  40px  15px vars.inner_reflection inset,
+    0px   5px   5px  -5px vars.top_saturator    inset,
+    0px   5px   5px   0px vars.bottom_tone      inset,
+    0px  -5px  20px  -5px vars.bottom_shadow    inset,
+    0px   1px   2px   0px vars.edge_reflection;
+  return { box-shadow: val }

@@ -1,2 +1,4 @@
-vignette()
-  'radial-gradient(transparent, ' + rgba($base_color, $vignette_effect) + ')'
+@import './vars.styl'
+__vignette($material, $state)
+  vars = __vars($material, $state)
+  'radial-gradient(transparent, ' + rgba(vars.base_color, $material.vignette_effect) + ')'

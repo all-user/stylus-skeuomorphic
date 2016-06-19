@@ -1,6 +1,8 @@
-reflect_blend(o, a)
-  transparentify(blend(rgba($top_highlight, o), $theme_color), a)
+@import './vars.styl'
 
+__reflect_blend(o, a, $material, $state)
+  vars = __vars($material, $state)
+  transparentify(blend(rgba(vars.top_highlight, o), $state.theme_color), a)
 
-reflection()
-  'linear-gradient(' + top + ',' + reflect_blend($top_blend, $top_alpha) + ' 0%,' + reflect_blend($bottom_blend, $bottom_alpha) + ' 50%, transparent 50%)'
+__reflection($material, $state)
+  'linear-gradient(' + top + ',' + __reflect_blend($material.top.blend, $material.top.alpha, $material, $state) + ' 0%,' + __reflect_blend($material.bottom.blend, $material.bottom.alpha, $material, $state) + ' 50%, transparent 50%)'

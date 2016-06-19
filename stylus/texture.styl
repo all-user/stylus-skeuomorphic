@@ -1,79 +1,93 @@
-flare(n)
+@import './vars.styl'
+
+__flare($params, $vars)
+  n = $params.times
   m = 100 / n
   str = ''
   for i in (0..n)
     if even(i)
-      c = rgba($peak, $texture_opacity)
+      c = rgba($vars.peak, $params.opacity)
     else
-      c = rgba($gutter, $texture_opacity)
+      c = rgba($vars.gutter, $params.opacity)
     if i isnt n
       str += '' + c + ' ' + m * i + '%, '
     else
       str += c
   'linear-gradient(left,' + str + ')'
 
-stripe_abs(n, angle)
-  _$peak = rgba($peak, $texture_opacity)
-  _$gutter = rgba($gutter, $texture_opacity)
-  'repeating-linear-gradient(' + angle + ', ' + _$peak + ', ' + _$peak + ' ' + n + 'px,' + _$gutter + ' ' + n + 'px,' + _$gutter + ' ' + n * 2 + 'px)'
+__stripe_abs($params, $vars)
+  n = $params.times
+  _$peak = rgba($vars.peak, $params.opacity)
+  _$gutter = rgba($vars.gutter, $params.opacity)
+  'repeating-linear-gradient(' + $params.angle + ', ' + _$peak + ', ' + _$peak + ' ' + n + 'px,' + _$gutter + ' ' + n + 'px,' + _$gutter + ' ' + n * 2 + 'px)'
 
-stripe(n, pos)
+__stripe($params, $vars)
+  n = $params.times
   m = 100 / n
   str = ''
   for i in (0..n)
     if even(i)
-      c = rgba($peak, $texture_opacity)
+      c = rgba($vars.peak, $params.opacity)
     else
-      c = rgba($gutter, $texture_opacity)
+      c = rgba($vars.gutter, $params.opacity)
     if i isnt n
       str += '' + c + ' ' + m * i + '%, ' + c + ' ' + m * (i + 1) + '%, '
     else
       str += c
-  'linear-gradient(' + pos + ', ' + str + ')'
+  'linear-gradient(' + params.pos + ', ' + str + ')'
 
-v_stripe(n)
-  stripe(n, 'left')
+__v_stripe($params, $vars)
+  $params.pos = 'left'
+  __stripe($params, $vars)
 
-v_stripe_abs(n)
-  stripe_abs(n, '90deg')
+__v_stripe_abs($params, $vars)
+  $params.angle = '90deg'
+  __stripe_abs($params, $vars)
 
-h_stripe(n)
-  stripe(n, 'top')
+__h_stripe($params, $vars)
+  $params.pos = 'top'
+  __stripe($params, $vars)
 
-h_stripe_abs(n)
-  stripe_abs(n, '180deg')
+__h_stripe_abs($params, $vars)
+  $params.angle = '180deg'
+  __stripe_abs($params, $vars)
 
-tl_stripe(n)
-  stripe(n, 'left top')
+__tl_stripe($params, $vars)
+  $params.pos = 'left top'
+  __stripe($params, $vars)
 
-tl_stripe_abs(n)
-  stripe_abs(n, '135deg')
+__tl_stripe_abs($params, $vars)
+  $params.angle = '135deg'
+  __stripe_abs($params, $vars)
 
-tr_stripe(n)
-  stripe(n, 'right top')
+__tr_stripe($params, $vars)
+  $params.pos = 'right top'
+  __stripe($params, $vars)
 
-tr_stripe_abs(n)
-  stripe_abs(n, '225deg')
+__tr_stripe_abs($params, $vars)
+  $params.angle = '225deg'
+  __stripe_abs($params, $vars)
 
-draw_texture(type, param)
-  if type is 'flare'
-    return flare(param)
-  if type is 'v_stripe'
-    return v_stripe(param)
-  if type is 'v_stripe_abs'
-    return v_stripe_abs(param)
-  if type is 'h_stripe'
-    return h_stripe(param)
-  if type is 'h_stripe_abs'
-    return h_stripe_abs(param)
-  if type is 'tl_stripe'
-    return tl_stripe(param)
-  if type is 'tl_stripe_abs'
-    return tl_stripe_abs(param)
-  if type is 'tr_stripe'
-    return tr_stripe(param)
-  if type is 'tr_stripe_abs'
-    return tr_stripe_abs(param)
-  if type is 'image'
-    return 'url("' + param + '")'
+__draw_texture($material, $state)
+  vars = __vars($material, $state)
+  if $material.texture.type is 'flare'
+    return __flare($material.texture, vars)
+  if $material.texture.type is 'v_stripe'
+    return __v_stripe($material.texture, vars)
+  if $material.texture.type is 'v_stripe_abs'
+    return __v_stripe_abs($material.texture, vars)
+  if $material.texture.type is 'h_stripe'
+    return __h_stripe($material.texture, vars)
+  if $material.texture.type is 'h_stripe_abs'
+    return __h_stripe_abs($material.texture, vars)
+  if $material.texture.type is 'tl_stripe'
+    return __tl_stripe($material.texture, vars)
+  if $material.texture.type is 'tl_stripe_abs'
+    return __tl_stripe_abs($material.texture, vars)
+  if $material.texture.type is 'tr_stripe'
+    return __tr_stripe($material.texture, vars)
+  if $material.texture.type is 'tr_stripe_abs'
+    return __tr_stripe_abs($material.texture, vars)
+  if $material.texture.type is 'image'
+    return 'url("' + $material.texture.src + '")'
   return 'linear-gradient(top, transparent 0%, transparent)'

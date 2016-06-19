@@ -1,81 +1,65 @@
-$theme_prefix ?= ''
 @import 'nib'
-
-@import $material
-// normal theme
-@import $normal
-
-@import './var.styl'
+@import './vars.styl'
 @import './text.styl'
 @import './detail.styl'
 @import './vignette.styl'
 @import './reflection.styl'
 @import './texture.styl'
 
-bg_color()
-  background $bg_color
-
 circle()
   border-radius 50%
 
-skeu_basic()
-  z-index 0
-  display block
-  position relative
+__skeu_basic($duration)
+  ret1 = {
+    z-index: 0,
+    display: block,
+    position: relative
+  }
   if $duration isnt 0ms
-    transition $duration background, $duration color, $duration top, $duration text-shadow
+    str = ''
+    for key in 'background, ' 'color, ' 'top, ' 'text-shadow'
+      str += '' + $duration + ' ' + key
+    ret2 = { transition: convert(str) }
+    return merge(ret1, ret2)
+  else
+    return ret1
 
-skeu_common()
-  color $txt_color
-  draw_text()
-  background convert(vignette() + ',' + reflection() + ',' + draw_texture($texture, $texture_param) + ',' + $base_color)
-  background-size auto, auto, unquote($image_size)
+__skeu_common($material, $state)
+  size = $material.texture.size
+  size ?= 'auto'
+  ret = {
+    color: $state.txt_color,
+    background: convert(__vignette($material, $state) + ',' + __reflection($material, $state) + ',' + __draw_texture($material, $state) + ',' + $state.base_color),
+    background-size: convert('auto, auto,' + size)
+  }
+  vars = __vars($material, $state)
+  return merge(ret, __draw_text(vars))
 
-${$theme_prefix}_skeu
-  skeu_basic()
-  skeu_common()
-  draw_detail()
-
-${$theme_prefix}_skeu_chain
-  skeu_basic()
-  skeu_common()
-  draw_detail_chain()
-
-${$theme_prefix}_skeu_chain_l
-  skeu_basic()
-  skeu_common()
-  draw_detail_chain_l()
-
-${$theme_prefix}_skeu_chain_r
-  skeu_basic()
-  skeu_common()
-  draw_detail_chain_r()
-
-// hover theme
-@import $hover
-@import './var.styl'
-
-${$theme_prefix}_skeu_hover
-  skeu_common()
-  draw_detail()
-
-${$theme_prefix}_skeu_chain_hover
-  skeu_common()
-  draw_detail_chain()
-
-${$theme_prefix}_skeu_chain_l_hover
-  skeu_common()
-  draw_detail_chain_l()
-
-${$theme_prefix}_skeu_chain_r_hover
-  skeu_common()
-  draw_detail_chain_r()
-
-// active theme
-@import $active
-@import './var.styl'
-
-${$theme_prefix}_skeu_active
-  top $active_depth
-  skeu_common()
-  draw_pushed()
+stylus-skeuomorphic($params, $options = {})
+  basic = __skeu_basic($params.material.duration)
+  isolate = {}
+  isolate.normal = merge(basic, __skeu_common($params.material, $params.normal), __draw_detail($params.material, $params.normal, $options))
+  isolate.hover = merge(__skeu_common($params.material, $params.hover), __draw_detail($params.material, $params.hover, $options))
+  isolate.active = merge(__skeu_common($params.material, $params.active), __draw_pushed($params.material, $params.active, $options))
+  chain = {}
+  chain.normal = merge(basic, __skeu_common($params.material, $params.normal), __draw_detail_chain($params.material, $params.normal, $options))
+  chain.hover = merge(__skeu_common($params.material, $params.hover), __draw_detail_chain($params.material, $params.hover, $options))
+  chain.active = merge(__skeu_common($params.material, $params.active), __draw_pushed($params.material, $params.active, $options))
+  chain-left = {}
+  chain-left.normal = merge(basic, __skeu_common($params.material, $params.normal), __draw_detail_chain_l($params.material, $params.normal, $options))
+  chain-left.hover = merge(__skeu_common($params.material, $params.hover), __draw_detail_chain_l($params.material, $params.hover, $options))
+  chain-left.active = merge(__skeu_common($params.material, $params.active), __draw_pushed($params.material, $params.active, $options))
+  chain-right = {}
+  chain-right.normal = merge(basic, __skeu_common($params.material, $params.normal), __draw_detail_chain_r($params.material, $params.normal, $options))
+  chain-right.hover = merge(__skeu_common($params.material, $params.hover), __draw_detail_chain_r($params.material, $params.hover, $options))
+  chain-right.active = merge(__skeu_common($params.material, $params.active), __draw_pushed($params.material, $params.active, $options))
+  ret = {
+    bg_color: {
+      background-color: $params.material.bg_color
+    }
+    isolate: isolate,
+    chain: chain,
+    chain-left: chain-left,
+    chain-right: chain-right
+  }
+  define('skeu-' + $params.suffix, ret, true)
