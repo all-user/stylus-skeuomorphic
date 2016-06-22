@@ -10,13 +10,10 @@ body-attrs = skeu-purple.bg_color
 body
   { body-attrs }
 
-
-isolate-normal =  skeu-purple.isolate.normal
-isolate-hover =  skeu-purple.isolate.hover
-isolate-active =  skeu-purple.isolate.active
+isolate-all =  skeu-purple.isolate-all
 
 .fig-01
-  { isolate-normal }
+  { isolate-all }
   font-size 50px
   font-family 'League Script', cursive
   font-weight normal
@@ -27,39 +24,27 @@ isolate-active =  skeu-purple.isolate.active
   display inline-block
   size auto auto
   margin 150px 0
-  &:hover
-    { isolate-hover }
-  &:active
-    { isolate-active }
 
-// .fig-02
-//   { skeu-purple.isolate.normal }
-//   circle()
-//   font-size 150px
-//   line-height 150px
-//   font-family 'Copperplate'
-//   text-align center
-//   size 300px 300px
-//   box-sizing border-box
-//   padding 70px 0 0
-//   margin auto
-//   &:hover
-//     { skeu-purple.isolate.hover }
-//   &:active
-//     { skeu-purple.isolate.active }
+.fig-02
+  { isolate-all }
+  circle()
+  font-size 150px
+  line-height 150px
+  font-family 'Copperplate'
+  text-align center
+  size 300px 300px
+  box-sizing border-box
+  padding 70px 0 0
+  margin auto
 
-// .fig-03
-//   { skeu-purple.isolate.normal }
-//   font-size 50px
-//   font-family 'Copperplate'
-//   letter-spacing .2em
-//   text-align center
-//   padding 100px 0
-//   box-sizing border-box
-//   display block
-//   size 60% 100%
-//   margin 150px auto
-//   &:hover
-//     { skeu-purple.isolate.hover }
-//   &:active
-//     { skeu-purple.isolate.active }
+.fig-03
+  { isolate-all }
+  font-size 50px
+  font-family 'Copperplate'
+  letter-spacing .2em
+  text-align center
+  padding 100px 0
+  box-sizing border-box
+  display block
+  size 60% 100%
+  margin 150px auto

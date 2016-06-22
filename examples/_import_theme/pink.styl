@@ -1,5 +1,9 @@
-$theme_prefix = 'pink'
-$material     = '../../stylus/theme/pink/material.styl'
-$normal       = '../../stylus/theme/pink/normal.styl'
-$hover        = '../../stylus/theme/pink/hover.styl'
-$active       = '../../stylus/theme/pink/active.styl'
+gen-pink-theme()
+  options = { hash: true }
+  return {
+    suffix: 'pink',
+    material: json('../../stylus/theme/pink/material.json', options),
+    normal: json('../../stylus/theme/pink/normal.json', options),
+    hover: json('../../stylus/theme/pink/hover.json', options),
+    active: json('../../stylus/theme/pink/active.json', options)
+  }

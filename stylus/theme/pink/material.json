@@ -1,19 +1,19 @@
 {
   "duration": "100ms",
   "texture": {
-    "type": "'image'",
-    "src": "'../../images/pattern.png'",
-    "size": "300px 300px"
+    "type": "'flare'",
+    "times": 5,
+    "opacity": 0.2
   },
-  "bg_color": "#ccd",
+  "bg_color": "desaturate(#33aaa0, 10)",
   "vignette_effect": 0.3,
   "diffusion": 0.1,
   "top": {
-    "blend": 0.25,
+    "blend": 0.18,
     "alpha": 0.8
   },
   "bottom": {
-    "blend": 0.15,
+    "blend": 0.18,
     "alpha": 0.5
   }
 }

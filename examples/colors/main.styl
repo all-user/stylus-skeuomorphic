@@ -1,29 +1,49 @@
-$shadow_length = 0px
-$active_depth  = 1px
+@import '../../stylus/skeu.styl'
 
 @import '../_import_theme/gray.styl'
-@import '../../stylus/skeu.styl'
+$gray-params = gen-gray-theme()
+$gray-params.material.shadow_length = 0px
+$gray-params.material.active_depth = 1px
+stylus-skeuomorphic($gray-params)
 
 @import '../_import_theme/pink.styl'
-@import '../../stylus/skeu.styl'
+$pink-params = gen-pink-theme()
+$pink-params.material.shadow_length = 0px
+$pink-params.material.active_depth = 1px
+stylus-skeuomorphic($pink-params)
 
-$image_size = '300px 300px'
-$texture_param = '../../images/pattern.png'
 @import '../_import_theme/purple.styl'
-@import '../../stylus/skeu.styl'
+$purple-params = gen-purple-theme()
+$purple-params.material.texture.size = '300px 300px'
+$purple-params.material.texture.src = '../../images/pattern.png'
+$purple-params.material.shadow_length = 0px
+$purple-params.material.active_depth = 1px
+stylus-skeuomorphic($purple-params)
 
-$texture_param = '../../images/canvas.png'
 @import '../_import_theme/yellow.styl'
-@import '../../stylus/skeu.styl'
+$yellow-params = gen-yellow-theme()
+$yellow-params.material.texture.src = '../../images/pattern.png'
+$yellow-params.material.shadow_length = 0px
+$yellow-params.material.active_depth = 1px
+stylus-skeuomorphic($yellow-params)
 
 @import '../_import_theme/green.styl'
-@import '../../stylus/skeu.styl'
+$green-params = gen-green-theme()
+$green-params.material.shadow_length = 0px
+$green-params.material.active_depth = 1px
+stylus-skeuomorphic($green-params)
 
 @import '../_import_theme/blue.styl'
-@import '../../stylus/skeu.styl'
+$blue-params = gen-blue-theme()
+$blue-params.material.shadow_length = 0px
+$blue-params.material.active_depth = 1px
+stylus-skeuomorphic($blue-params)
 
 @import '../_import_theme/red.styl'
-@import '../../stylus/skeu.styl'
+$red-params = gen-red-theme()
+$red-params.material.shadow_length = 0px
+$red-params.material.active_depth = 1px
+stylus-skeuomorphic($red-params)
 
 *
   box-sizing border-box
@@ -34,60 +54,39 @@ body
 
 $h = 36px
 
+gray-all = skeu-gray.chain-right-all
 .gray
-  $gray_skeu_chain_r($h)
+  { gray-all }
   border-right 1px solid #555
-  &:hover
-    $gray_skeu_chain_r_hover($h)
-  &:active
-    $gray_skeu_active($h)
 
+pink-all = skeu-pink.chain-all
 .pink
-  $pink_skeu_chain($h)
+  { pink-all }
   border-right 1px solid #555
-  &:hover
-    $pink_skeu_chain_hover($h)
-  &:active
-    $pink_skeu_active($h)
 
+purple-all = skeu-purple.chain-all
 .purple
-  $purple_skeu_chain($h)
+  { purple-all }
   border-right 1px solid #555
-  &:hover
-    $purple_skeu_chain_hover($h)
-  &:active
-    $purple_skeu_active($h)
 
+yellow-all = skeu-yellow.chain-all
 .yellow
-  $yellow_skeu_chain($h)
+  { yellow-all }
   border-right 1px solid #555
-  &:hover
-    $yellow_skeu_chain_hover($h)
-  &:active
-    $yellow_skeu_active($h)
 
+green-all = skeu-green.chain-all
 .green
-  $green_skeu_chain($h)
+  { green-all }
   border-right 1px solid #555
-  &:hover
-    $green_skeu_chain_hover($h)
-  &:active
-    $green_skeu_active($h)
 
+blue-all = skeu-blue.chain-all
 .blue
-  $blue_skeu_chain($h)
+  { blue-all }
   border-right 1px solid #555
-  &:hover
-    $blue_skeu_chain_hover($h)
-  &:active
-    $blue_skeu_active($h)
 
+red-all = skeu-red.chain-left-all
 .red
-  $red_skeu_chain_l($h)
-  &:hover
-    $red_skeu_chain_l_hover($h)
-  &:active
-    $red_skeu_active($h)
+  { red-all }
 
 .skeu
   display inline-block

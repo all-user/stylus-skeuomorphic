@@ -5,17 +5,16 @@ __scale($height, $default)
   ret = $height * (-10px / 60px) if $height
   return ret
 
-__draw_detail($material, $state, $options)
-  h = $options.height
+__draw_detail($material, $state)
   vars = __vars($material, $state)
-  val = -1px   0px   0px   0px vars.edge_reflection inset,
-    -4px   0px   2px  -2px vars.middle_tone     inset,
+  val = -1px 0px 0px 0px vars.edge_reflection inset,
+   -4px   0px   2px  -2px vars.middle_tone     inset,
     1px   0px   0px   0px vars.edge_reflection inset,
     4px   0px   2px  -2px vars.middle_tone     inset,
     0px   1px   0px   0px vars.middle_tone     inset,
     0px   2px   0px   0px vars.top_highlight   inset,
     0px  -1px   0px   0px vars.bottom_shadow   inset,
-    0px __scale(h, -10px) 5px  -8px vars.bottom_reflection inset,
+    0px -10px   5px  -8px vars.bottom_reflection inset,
     0px   0px  30px   5px vars.indirect_light  inset,
     0px   0px  30px   5px vars.indirect_shadow inset,
     0px   0px  40px  15px vars.inner_reflection inset,

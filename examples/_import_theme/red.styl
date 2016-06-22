@@ -1,5 +1,9 @@
-$theme_prefix = 'red'
-$material     = '../../stylus/theme/red/material.styl'
-$normal       = '../../stylus/theme/red/normal.styl'
-$hover        = '../../stylus/theme/red/hover.styl'
-$active       = '../../stylus/theme/red/active.styl'
+gen-red-theme()
+  options = { hash: true }
+  return {
+    suffix: 'red',
+    material: json('../../stylus/theme/red/material.json', options),
+    normal: json('../../stylus/theme/red/normal.json', options),
+    hover: json('../../stylus/theme/red/hover.json', options),
+    active: json('../../stylus/theme/red/active.json', options)
+  }

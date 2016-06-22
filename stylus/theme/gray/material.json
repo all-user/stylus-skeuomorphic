@@ -1,12 +1,12 @@
 {
   "duration": "100ms",
   "texture": {
-    "type": "'image'",
-    "src": "'../../images/pattern.png'",
-    "size": "300px 300px"
+    "type": "'flare'",
+    "times": 5,
+    "opacity": 0.2
   },
-  "bg_color": "#ccd",
-  "vignette_effect": 0.3,
+  "bg_color": "white",
+  "vignette_effect": 0.1,
   "diffusion": 0.1,
   "top": {
     "blend": 0.25,
