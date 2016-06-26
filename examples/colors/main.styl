@@ -1,46 +1,39 @@
 @import '../../stylus/skeu.styl'
 
-@import '../_import_theme/gray.styl'
-$gray-params = gen-gray-theme()
+$gray-params = json('../../stylus/themes/gray/theme.json', { hash: true })
 $gray-params.material.shadow_length = 0px
 $gray-params.material.active_depth = 1px
 stylus-skeuomorphic($gray-params)
 
-@import '../_import_theme/pink.styl'
-$pink-params = gen-pink-theme()
+$pink-params = json('../../stylus/themes/pink/theme.json', { hash: true })
 $pink-params.material.shadow_length = 0px
 $pink-params.material.active_depth = 1px
 stylus-skeuomorphic($pink-params)
 
-@import '../_import_theme/purple.styl'
-$purple-params = gen-purple-theme()
+$purple-params = json('../../stylus/themes/purple/theme.json', { hash: true })
 $purple-params.material.texture.size = '300px 300px'
 $purple-params.material.texture.src = '../../images/pattern.png'
 $purple-params.material.shadow_length = 0px
 $purple-params.material.active_depth = 1px
 stylus-skeuomorphic($purple-params)
 
-@import '../_import_theme/yellow.styl'
-$yellow-params = gen-yellow-theme()
+$yellow-params = json('../../stylus/themes/yellow/theme.json', { hash: true })
 $yellow-params.material.texture.src = '../../images/pattern.png'
 $yellow-params.material.shadow_length = 0px
 $yellow-params.material.active_depth = 1px
 stylus-skeuomorphic($yellow-params)
 
-@import '../_import_theme/green.styl'
-$green-params = gen-green-theme()
+$green-params = json('../../stylus/themes/green/theme.json', { hash: true })
 $green-params.material.shadow_length = 0px
 $green-params.material.active_depth = 1px
 stylus-skeuomorphic($green-params)
 
-@import '../_import_theme/blue.styl'
-$blue-params = gen-blue-theme()
+$blue-params = json('../../stylus/themes/blue/theme.json', { hash: true })
 $blue-params.material.shadow_length = 0px
 $blue-params.material.active_depth = 1px
 stylus-skeuomorphic($blue-params)
 
-@import '../_import_theme/red.styl'
-$red-params = gen-red-theme()
+$red-params = json('../../stylus/themes/red/theme.json', { hash: true })
 $red-params.material.shadow_length = 0px
 $red-params.material.active_depth = 1px
 stylus-skeuomorphic($red-params)

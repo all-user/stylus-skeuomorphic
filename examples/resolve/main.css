@@ -6,7 +6,7 @@
   overflow-x: scroll;
   margin: 0;
   padding: 100px 0;
-  background: #edded4;
+  background-color: #edded4;
   text-align: center;
 }
 #stylus-skeu-2-resolve-bg #stylus-skeu-2-resolve-wrapper {
@@ -49,7 +49,7 @@ html[data-device="touch"] #stylus-skeu-2-resolve-bg #stylus-skeu-2-resolve-wrapp
 #stylus-skeu-2-resolve-bg #stylus-skeu-2-resolve-wrapper #stylus-skeu-2-text {
   z-index: 500;
   color: #58a;
-  text-shadow: 0px -1px 0px #000, 0px -2px 0px rgba(155,141,129,0.6), 0px -3px 0px #544f4a, 0px 1px 0px rgba(155,141,129,0.6), 0px 3px rgba(0,0,0,0.2);
+  text-shadow: {"text-shadow":"(((0px -1px 0px (((#000)))), (0px -2px 0px (((rgba(155,140,129,0.6))))), (0px -3px 0px (((#4c4a44)))), (0px 1px 0px (((rgba(155,140,129,0.6))))), (0px 3px rgba(0,0,0,0.2))))"};
 }
 #stylus-skeu-2-resolve-bg #stylus-skeu-2-resolve-wrapper #stylus-skeu-2-text > i {
   color: #58a;
@@ -63,46 +63,46 @@ html[data-device="touch"] #stylus-skeu-2-resolve-bg #stylus-skeu-2-resolve-wrapp
 }
 #stylus-skeu-2-resolve-bg #stylus-skeu-2-resolve-wrapper #stylus-skeu-2-detail {
   z-index: 400;
-  -webkit-box-shadow: -1px 0px 0px 0px rgba(255,255,255,0.2) inset, -4px 0px 2px -2px #544f4a inset, 1px 0px 0px 0px rgba(255,255,255,0.2) inset, 4px 0px 2px -2px #544f4a inset, 0px 1px 0px 0px #544f4a inset, 0px 2px 0px 0px #fff inset, 0px -1px 0px 0px #000 inset, 0px -10px 5px -8px rgba(255,255,255,0.8) inset, 0px 0px 30px 5px rgba(155,141,129,0.6) inset, 0px 0px 30px 5px rgba(0,0,0,0.25) inset, 0px 0px 40px 15px rgba(255,255,255,0.1) inset, 0px 5px 5px -5px #293800 inset, 0px 5px 5px 0px rgba(255,255,255,0.03) inset, 0px -5px 0px 0px rgba(0,0,0,0.4) inset, 0px 10px 5px 0px rgba(0,0,0,0.15);
-  box-shadow: -1px 0px 0px 0px rgba(255,255,255,0.2) inset, -4px 0px 2px -2px #544f4a inset, 1px 0px 0px 0px rgba(255,255,255,0.2) inset, 4px 0px 2px -2px #544f4a inset, 0px 1px 0px 0px #544f4a inset, 0px 2px 0px 0px #fff inset, 0px -1px 0px 0px #000 inset, 0px -10px 5px -8px rgba(255,255,255,0.8) inset, 0px 0px 30px 5px rgba(155,141,129,0.6) inset, 0px 0px 30px 5px rgba(0,0,0,0.25) inset, 0px 0px 40px 15px rgba(255,255,255,0.1) inset, 0px 5px 5px -5px #293800 inset, 0px 5px 5px 0px rgba(255,255,255,0.03) inset, 0px -5px 0px 0px rgba(0,0,0,0.4) inset, 0px 10px 5px 0px rgba(0,0,0,0.15);
+  -webkit-box-shadow: -1px 0px 0px 0px rgba(255,255,255,0.2) inset, -4px 0px 2px -2px #4c4a44 inset, 1px 0px 0px 0px rgba(255,255,255,0.2) inset, 4px 0px 2px -2px #4c4a44 inset, 0px 1px 0px 0px #4c4a44 inset, 0px 2px 0px 0px #fff inset, 0px -1px 0px 0px #000 inset, 0px -10px 5px -8px rgba(255,255,255,0.8) inset, 0px 0px 30px 5px rgba(155,140,129,0.6) inset, 0px 0px 30px 5px rgba(0,0,0,0.25) inset, 0px 0px 40px 15px rgba(255,255,255,0.1) inset, 0px 5px 5px -5px #382f00 inset, 0px 5px 5px 0px rgba(255,255,255,0.03) inset, 0px -5px 0px 0px rgba(0,0,0,0.4) inset, 0px  5px 0px rgba(0,0,0,0.15);
+  box-shadow: -1px 0px 0px 0px rgba(255,255,255,0.2) inset, -4px 0px 2px -2px #4c4a44 inset, 1px 0px 0px 0px rgba(255,255,255,0.2) inset, 4px 0px 2px -2px #4c4a44 inset, 0px 1px 0px 0px #4c4a44 inset, 0px 2px 0px 0px #fff inset, 0px -1px 0px 0px #000 inset, 0px -10px 5px -8px rgba(255,255,255,0.8) inset, 0px 0px 30px 5px rgba(155,140,129,0.6) inset, 0px 0px 30px 5px rgba(0,0,0,0.25) inset, 0px 0px 40px 15px rgba(255,255,255,0.1) inset, 0px 5px 5px -5px #382f00 inset, 0px 5px 5px 0px rgba(255,255,255,0.03) inset, 0px -5px 0px 0px rgba(0,0,0,0.4) inset, 0px  5px 0px rgba(0,0,0,0.15);
 }
 #stylus-skeu-2-resolve-bg #stylus-skeu-2-resolve-wrapper:hover #stylus-skeu-2-detail {
   top: 100px;
 }
 #stylus-skeu-2-resolve-bg #stylus-skeu-2-resolve-wrapper #stylus-skeu-2-vignette {
   z-index: 300;
-  background: -webkit-radial-gradient(transparent, rgba(67,61,58,0.3));
-  background: -moz-radial-gradient(transparent, rgba(67,61,58,0.3));
-  background: -o-radial-gradient(transparent, rgba(67,61,58,0.3));
-  background: -ms-radial-gradient(transparent, rgba(67,61,58,0.3));
-  background: radial-gradient(transparent, rgba(67,61,58,0.3));
+  background: -webkit-radial-gradient(transparent, rgba(59,54,51,0.3));
+  background: -moz-radial-gradient(transparent, rgba(59,54,51,0.3));
+  background: -o-radial-gradient(transparent, rgba(59,54,51,0.3));
+  background: -ms-radial-gradient(transparent, rgba(59,54,51,0.3));
+  background: radial-gradient(transparent, rgba(59,54,51,0.3));
 }
 #stylus-skeu-2-resolve-bg #stylus-skeu-2-resolve-wrapper:hover #stylus-skeu-2-vignette {
   top: 75px;
 }
 #stylus-skeu-2-resolve-bg #stylus-skeu-2-resolve-wrapper #stylus-skeu-2-reflection {
   z-index: 200;
-  background: -webkit-linear-gradient(top, rgba(165,158,153,0.8) 0%, rgba(97,85,75,0.5) 50%, transparent 50%);
-  background: -moz-linear-gradient(top, rgba(165,158,153,0.8) 0%, rgba(97,85,75,0.5) 50%, transparent 50%);
-  background: -o-linear-gradient(top, rgba(165,158,153,0.8) 0%, rgba(97,85,75,0.5) 50%, transparent 50%);
-  background: -ms-linear-gradient(top, rgba(165,158,153,0.8) 0%, rgba(97,85,75,0.5) 50%, transparent 50%);
-  background: linear-gradient(to bottom, rgba(165,158,153,0.8) 0%, rgba(97,85,75,0.5) 50%, transparent 50%);
+  background: -webkit-linear-gradient(top, rgba(156,149,143,0.8) 0%, rgba(97,85,75,0.5) 50%, transparent 50%);
+  background: -moz-linear-gradient(top, rgba(156,149,143,0.8) 0%, rgba(97,85,75,0.5) 50%, transparent 50%);
+  background: -o-linear-gradient(top, rgba(156,149,143,0.8) 0%, rgba(97,85,75,0.5) 50%, transparent 50%);
+  background: -ms-linear-gradient(top, rgba(156,149,143,0.8) 0%, rgba(97,85,75,0.5) 50%, transparent 50%);
+  background: linear-gradient(to bottom, rgba(156,149,143,0.8) 0%, rgba(97,85,75,0.5) 50%, transparent 50%);
 }
 #stylus-skeu-2-resolve-bg #stylus-skeu-2-resolve-wrapper:hover #stylus-skeu-2-reflection {
   top: 50px;
 }
 #stylus-skeu-2-resolve-bg #stylus-skeu-2-resolve-wrapper #stylus-skeu-2-texture {
   z-index: 100;
-  background: -webkit-linear-gradient(left, rgba(64,60,58,0.3) 0%, rgba(0,0,0,0.3) 20%, rgba(64,60,58,0.3) 40%, rgba(0,0,0,0.3) 60%, rgba(64,60,58,0.3) 80%, rgba(0,0,0,0.3));
-  background: -moz-linear-gradient(left, rgba(64,60,58,0.3) 0%, rgba(0,0,0,0.3) 20%, rgba(64,60,58,0.3) 40%, rgba(0,0,0,0.3) 60%, rgba(64,60,58,0.3) 80%, rgba(0,0,0,0.3));
-  background: -o-linear-gradient(left, rgba(64,60,58,0.3) 0%, rgba(0,0,0,0.3) 20%, rgba(64,60,58,0.3) 40%, rgba(0,0,0,0.3) 60%, rgba(64,60,58,0.3) 80%, rgba(0,0,0,0.3));
-  background: -ms-linear-gradient(left, rgba(64,60,58,0.3) 0%, rgba(0,0,0,0.3) 20%, rgba(64,60,58,0.3) 40%, rgba(0,0,0,0.3) 60%, rgba(64,60,58,0.3) 80%, rgba(0,0,0,0.3));
-  background: linear-gradient(to right, rgba(64,60,58,0.3) 0%, rgba(0,0,0,0.3) 20%, rgba(64,60,58,0.3) 40%, rgba(0,0,0,0.3) 60%, rgba(64,60,58,0.3) 80%, rgba(0,0,0,0.3));
+  background: -webkit-linear-gradient(left, rgba(64,59,58,0.2) 0%, rgba(0,0,0,0.2) 20%, rgba(64,59,58,0.2) 40%, rgba(0,0,0,0.2) 60%, rgba(64,59,58,0.2) 80%, rgba(0,0,0,0.2));
+  background: -moz-linear-gradient(left, rgba(64,59,58,0.2) 0%, rgba(0,0,0,0.2) 20%, rgba(64,59,58,0.2) 40%, rgba(0,0,0,0.2) 60%, rgba(64,59,58,0.2) 80%, rgba(0,0,0,0.2));
+  background: -o-linear-gradient(left, rgba(64,59,58,0.2) 0%, rgba(0,0,0,0.2) 20%, rgba(64,59,58,0.2) 40%, rgba(0,0,0,0.2) 60%, rgba(64,59,58,0.2) 80%, rgba(0,0,0,0.2));
+  background: -ms-linear-gradient(left, rgba(64,59,58,0.2) 0%, rgba(0,0,0,0.2) 20%, rgba(64,59,58,0.2) 40%, rgba(0,0,0,0.2) 60%, rgba(64,59,58,0.2) 80%, rgba(0,0,0,0.2));
+  background: linear-gradient(to right, rgba(64,59,58,0.2) 0%, rgba(0,0,0,0.2) 20%, rgba(64,59,58,0.2) 40%, rgba(0,0,0,0.2) 60%, rgba(64,59,58,0.2) 80%, rgba(0,0,0,0.2));
 }
 #stylus-skeu-2-resolve-bg #stylus-skeu-2-resolve-wrapper:hover #stylus-skeu-2-texture {
   top: 25px;
 }
 #stylus-skeu-2-resolve-bg #stylus-skeu-2-resolve-wrapper #stylus-skeu-2-basecolor {
   z-index: 0;
-  background: #433d3a;
+  background: #3b3633;
 }

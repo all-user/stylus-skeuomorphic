@@ -1,5 +1,5 @@
-@import '../_import_theme/pink.styl'
 @import '../../stylus/skeu.styl'
+$params = json('../../stylus/themes/pink/theme.json', { hash: true })
 
 $adjust = 100px
 $adjust_touch = 20px
@@ -7,6 +7,15 @@ $adjust_top = $adjust / 4
 $resolve_duration = 1500ms
 $resolve_size = 80px
 
+$vars = __vars($params.material, $params.normal)
+$detail = __draw_detail($params.material, $params.normal)
+$vignette = __vignette($params.material, $params.normal)
+$reflection = __reflection($params.material, $params.normal)
+$texture = __draw_texture($params.material, $params.normal)
+
+base_color = $vars.base_color
+
+bg_color = $params.material.bg_color
 #stylus-skeu-2-resolve-bg
   display block
   position relative
@@ -14,7 +23,7 @@ $resolve_size = 80px
   overflow-x scroll
   margin 0
   padding 100px 0
-  bg_color()
+  background-color  bg_color
   text-align center
   #stylus-skeu-2-resolve-wrapper
     display inline-block
@@ -41,7 +50,7 @@ $resolve_size = 80px
     #stylus-skeu-2-text
       z-index 500
       color #58a
-      draw_text()
+      text-shadow __draw_text($vars)
       & > i
         color #58a
         font-size ($resolve_size / 3)
@@ -51,26 +60,24 @@ $resolve_size = 80px
       top $adjust_top * 5
     #stylus-skeu-2-detail
       z-index 400
-      draw_detail()
+      { $detail }
     &:hover #stylus-skeu-2-detail
       top $adjust_top * 4
     #stylus-skeu-2-vignette
       z-index 300
-      background convert(vignette())
+      background convert($vignette)
     &:hover #stylus-skeu-2-vignette
       top $adjust_top * 3
     #stylus-skeu-2-reflection
       z-index 200
-      background convert(reflection())
+      background convert($reflection)
     &:hover #stylus-skeu-2-reflection
       top $adjust_top * 2
     #stylus-skeu-2-texture
       z-index 100
-      background convert(draw_texture($texture, $texture_param))
+      background convert($texture)
     &:hover #stylus-skeu-2-texture
       top $adjust_top
     #stylus-skeu-2-basecolor
       z-index 0
-      background $base_color
-
-
+      background base_color

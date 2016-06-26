@@ -6,7 +6,9 @@
   "scripts": {
     "help": "npm-run-help",
     "build:css": "stylus -u nib examples/**/main.styl",
-    "build": "npm-run-all build:*"
+    "watch:css": "stylus -w -u nib examples/**/main.styl",
+    "build": "npm-run-all build:*",
+    "watch": "npm-run-all watch:*"
   },
   "repository": {
     "type": "git",
@@ -34,7 +36,7 @@
     "stylus": "^0.54.5"
   },
   "devDependencies": {
-    "npm-run-all": "^2.2.0",
+    "npm-run-all": "^2.2.2",
     "npm-run-help": "^1.1.0"
   },
   "license": "MIT"

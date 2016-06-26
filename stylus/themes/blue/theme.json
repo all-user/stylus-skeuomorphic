@@ -1,0 +1,43 @@
+{
+  "suffix": "'blue'",
+  "material": {
+    "duration": "100ms",
+    "texture": {
+      "type": "'tl_stripe'",
+      "times": 9,
+      "opacity": 0.2
+    },
+    "bg_color": "#33aadd",
+    "vignette_effect": 0.3,
+    "diffusion": 0,
+    "top": {
+      "blend": 0.18,
+      "alpha": 0.8
+    },
+    "bottom": {
+      "blend": 0.18,
+      "alpha": 0.5
+    }
+  },
+  "normal": {
+    "theme_color": "#33aadd",
+    "lightness_mod": -48,
+    "saturation_mod": -60,
+    "spin_mod": "0deg",
+    "txt_color": "#c33"
+  },
+  "hover": {
+    "theme_color": "#33aadd",
+    "lightness_mod": -48,
+    "saturation_mod": -60,
+    "spin_mod": "0deg",
+    "txt_color": "#f33"
+  },
+  "active": {
+    "theme_color": "#33aadd",
+    "lightness_mod": -48,
+    "saturation_mod": -60,
+    "spin_mod": "0deg",
+    "txt_color": "#077"
+  }
+}

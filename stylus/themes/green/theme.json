@@ -1,0 +1,43 @@
+{
+  "suffix": "'green'",
+  "material": {
+    "duration": "100ms",
+    "texture": {
+      "type": "'flare'",
+      "times": 5,
+      "opacity": 0.2
+    },
+    "bg_color": "desaturate(#33aaa0, 10)",
+    "vignette_effect": 0.3,
+    "diffusion": 0.1,
+    "top": {
+      "blend": 0.18,
+      "alpha": 0.8
+    },
+    "bottom": {
+      "blend": 0.18,
+      "alpha": 0.5
+    }
+  },
+  "normal": {
+    "theme_color": "#33aaa0",
+    "lightness_mod": -38,
+    "saturation_mod": 100,
+    "spin_mod": "25deg",
+    "txt_color": "#a25"
+  },
+  "hover": {
+    "theme_color": "#33aaa0",
+    "lightness_mod": -48,
+    "saturation_mod": 100,
+    "spin_mod": "25deg",
+    "txt_color": "#c25"
+  },
+  "active": {
+    "theme_color": "#33aaa0",
+    "lightness_mod": -48,
+    "saturation_mod": 100,
+    "spin_mod": "25deg",
+    "txt_color": "#22a"
+  }
+}

@@ -1,4 +1,3 @@
-@import '../_import_theme/gray.styl'
 @import '../../stylus/skeu.styl'
 
 no_deco()
@@ -7,8 +6,9 @@ no_deco()
     box-shadow none
     transition inherit
 
-sizer()
-  bg_color()
+sizer($material)
+  bg_color = $material.bg_color
+  background-color bg_color
   position relative
   display block
   box-sizing border-box
@@ -16,8 +16,9 @@ sizer()
   overflow-x scroll
   min-height 100vh
 
-wrapper()
-  bg_color()
+wrapper($material)
+  bg_color = $material.bg_color
+  background-color bg_color
   position relative
   display block
   box-sizing border-box
@@ -74,248 +75,269 @@ fig-03()
   size auto auto
   margin auto
 
+
+gray-params = json('../../stylus/themes/gray/theme.json', { hash: true })
+stylus-skeuomorphic(gray-params)
+gray-normal = skeu-gray.isolate.normal
+gray-hover = skeu-gray.isolate.hover
+gray-active = skeu-gray.isolate.active
 .gray-sizer
-  sizer()
+  sizer(gray-params.material)
   .gray-wrapper
-    wrapper()
+    wrapper(gray-params.material)
     & .fig-01
-      @extend $gray_skeu
+      { gray-normal }
       no_deco()
       fig-01()
       &.demo:hover
       &.hover
-        @extend $gray_skeu_hover
+        { gray-hover }
       &.demo:active
       &.active
-        @extend $gray_skeu_active
+        { gray-active }
     & .fig-02
-      @extend $gray_skeu
+      { gray-normal }
       no_deco()
       fig-02()
       &.demo:hover
-        @extend $gray_skeu_hover
+        { gray-hover }
       &.demo:active
-        @extend $gray_skeu_active
+        { gray-active }
     & .fig-03
-      @extend $gray_skeu
+      { gray-normal }
       no_deco()
       fig-03()
       &.demo:hover
-        @extend $gray_skeu_hover
+        { gray-hover }
       &.demo:active
-        @extend $gray_skeu_active
+        { gray-active }
 
-@import '../_import_theme/pink.styl'
-@import '../../stylus/skeu.styl'
-
+pink-params = json('../../stylus/themes/pink/theme.json', { hash: true })
+stylus-skeuomorphic(pink-params)
+pink-normal = skeu-pink.isolate.normal
+pink-hover = skeu-pink.isolate.hover
+pink-active = skeu-pink.isolate.active
 .pink-sizer
-  sizer()
+  sizer(pink-params.material)
   .pink-wrapper
-    wrapper()
+    wrapper(pink-params.material)
     & .fig-01
-      @extend $pink_skeu
+      { pink-normal }
       no_deco()
       fig-01()
       &.demo:hover
       &.hover
-        @extend $pink_skeu_hover
+        { pink-hover }
       &.demo:active
       &.active
-        @extend $pink_skeu_active
+        { pink-active }
     & .fig-02
-      @extend $pink_skeu
+      { pink-normal }
       no_deco()
       fig-02()
       &.demo:hover
-        @extend $pink_skeu_hover
+        { pink-hover }
       &.demo:active
-        @extend $pink_skeu_active
+        { pink-active }
     & .fig-03
-      @extend $pink_skeu
+      { pink-normal }
       no_deco()
       fig-03()
       &.demo:hover
-        @extend $pink_skeu_hover
+        { pink-hover }
       &.demo:active
-        @extend $pink_skeu_active
+        { pink-active }
 
-
-$image_size = '300px 300px'
-$texture_param = 'http://all-user.org/images/memowomome/css-skeu/pattern.png'
-@import '../_import_theme/purple.styl'
-@import '../../stylus/skeu.styl'
+purple-params = json('../../stylus/themes/purple/theme.json', { hash: true })
+purple-params.material.texture.type = 'image'
+purple-params.material.texture.size = '300px 300px'
+purple-params.material.texture.src = 'http://all-user.org/images/memowomome/css-skeu/pattern.png'
+stylus-skeuomorphic(purple-params)
+purple-normal = skeu-purple.isolate.normal
+purple-hover = skeu-purple.isolate.hover
+purple-active = skeu-purple.isolate.active
 
 .purple-sizer
-  sizer()
+  sizer(purple-params.material)
   .purple-wrapper
-    wrapper()
+    wrapper(purple-params.material)
     & .fig-01
-      @extend $purple_skeu
+      { purple-normal }
       no_deco()
       fig-01()
       &.demo:hover
       &.hover
-        @extend $purple_skeu_hover
+        { purple-hover }
       &.demo:active
       &.active
-        @extend $purple_skeu_active
+        { purple-active }
     & .fig-02
-      @extend $purple_skeu
+      { purple-normal }
       no_deco()
       fig-02()
       &.demo:hover
-        @extend $purple_skeu_hover
+        { purple-hover }
       &.demo:active
-        @extend $purple_skeu_active
+        { purple-active }
     & .fig-03
-      @extend $purple_skeu
+      { purple-normal }
       no_deco()
       fig-03()
       &.demo:hover
-        @extend $purple_skeu_hover
+        { purple-hover }
       &.demo:active
-        @extend $purple_skeu_active
+        { purple-active }
 
 
-$image_size = 'auto'
-$texture_param = 'http://all-user.org/images/memowomome/css-skeu/canvas.png'
-@import '../_import_theme/yellow.styl'
-@import '../../stylus/skeu.styl'
+yellow-params = json('../../stylus/themes/yellow/theme.json', { hash: true })
+yellow-params.material.texture.type = 'image'
+yellow-params.material.texture.size = 'auto'
+yellow-params.material.texture.src = 'http://all-user.org/images/memowomome/css-skeu/canvas.png'
+stylus-skeuomorphic(yellow-params)
+yellow-normal = skeu-yellow.isolate.normal
+yellow-hover = skeu-yellow.isolate.hover
+yellow-active = skeu-yellow.isolate.active
 
 .yellow-sizer
-  sizer()
+  sizer(yellow-params.material)
   .yellow-wrapper
-    wrapper()
+    wrapper(yellow-params.material)
     & .fig-01
-      @extend $yellow_skeu
+      { yellow-normal }
       no_deco()
       fig-01()
       &.demo:hover
       &.hover
-        @extend $yellow_skeu_hover
+        { yellow-hover }
       &.demo:active
       &.active
-        @extend $yellow_skeu_active
+        { yellow-active }
     & .fig-02
-      @extend $yellow_skeu
+      { yellow-normal }
       no_deco()
       fig-02()
       &.demo:hover
-        @extend $yellow_skeu_hover
+        { yellow-hover }
       &.demo:active
-        @extend $yellow_skeu_active
+        { yellow-active }
     & .fig-03
-      @extend $yellow_skeu
+      { yellow-normal }
       no_deco()
       fig-03()
       &.demo:hover
-        @extend $yellow_skeu_hover
+        { yellow-hover }
       &.demo:active
-        @extend $yellow_skeu_active
+        { yellow-active }
 
 
-@import '../_import_theme/green.styl'
-@import '../../stylus/skeu.styl'
+green-params = json('../../stylus/themes/green/theme.json', { hash: true })
+stylus-skeuomorphic(green-params)
+green-normal = skeu-green.isolate.normal
+green-hover = skeu-green.isolate.hover
+green-active = skeu-green.isolate.active
 
 .green-sizer
-  sizer()
+  sizer(green-params.material)
   .green-wrapper
-    wrapper()
+    wrapper(green-params.material)
     & .fig-01
-      @extend $green_skeu
+      { green-normal }
       no_deco()
       fig-01()
       &.demo:hover
       &.hover
-        @extend $green_skeu_hover
+        { green-hover }
       &.demo:active
       &.active
-        @extend $green_skeu_active
+        { green-active }
     & .fig-02
-      @extend $green_skeu
+      { green-normal }
       no_deco()
       fig-02()
       &.demo:hover
-        @extend $green_skeu_hover
+        { green-hover }
       &.demo:active
-        @extend $green_skeu_active
+        { green-active }
     & .fig-03
-      @extend $green_skeu
+      { green-normal }
       no_deco()
       fig-03()
       &.demo:hover
-        @extend $green_skeu_hover
+        { green-hover }
       &.demo:active
-        @extend $green_skeu_active
+        { green-active }
 
 
-@import '../_import_theme/blue.styl'
-@import '../../stylus/skeu.styl'
+blue-params = json('../../stylus/themes/blue/theme.json', { hash: true })
+stylus-skeuomorphic(blue-params)
+blue-normal = skeu-blue.isolate.normal
+blue-hover = skeu-blue.isolate.hover
+blue-active = skeu-blue.isolate.active
 
 .blue-sizer
-  sizer()
+  sizer(blue-params.material)
   .blue-wrapper
-    wrapper()
+    wrapper(blue-params.material)
     & .fig-01
-      @extend $blue_skeu
+      { blue-normal }
       no_deco()
       fig-01()
       &.demo:hover
       &.hover
-        @extend $blue_skeu_hover
+        { blue-hover }
       &.demo:active
       &.active
-        @extend $blue_skeu_active
+        { blue-active }
     & .fig-02
-      @extend $blue_skeu
+      { blue-normal }
       no_deco()
       fig-02()
       &.demo:hover
-        @extend $blue_skeu_hover
+        { blue-hover }
       &.demo:active
-        @extend $blue_skeu_active
+        { blue-active }
     & .fig-03
-      @extend $blue_skeu
+      { blue-normal }
       no_deco()
       fig-03()
       &.demo:hover
-        @extend $blue_skeu_hover
+        { blue-hover }
       &.demo:active
-        @extend $blue_skeu_active
+        { blue-active }
 
-
-@import '../_import_theme/red.styl'
-@import '../../stylus/skeu.styl'
+red-params = json('../../stylus/themes/red/theme.json', { hash: true })
+stylus-skeuomorphic(red-params)
+red-normal = skeu-red.isolate.normal
+red-hover = skeu-red.isolate.hover
+red-active = skeu-red.isolate.active
 
 .red-sizer
-  sizer()
+  sizer(red-params.material)
   .red-wrapper
-    wrapper()
+    wrapper(red-params.material)
     & .fig-01
-      @extend $red_skeu
+      { red-normal }
       no_deco()
       fig-01()
       &.demo:hover
       &.hover
-        @extend $red_skeu_hover
+        { red-hover }
       &.demo:active
       &.active
-        @extend $red_skeu_active
+        { red-active }
     & .fig-02
-      @extend $red_skeu
+      { red-normal }
       no_deco()
       fig-02()
       &.demo:hover
-        @extend $red_skeu_hover
+        { red-hover }
       &.demo:active
-        @extend $red_skeu_active
+        { red-active }
     & .fig-03
-      @extend $red_skeu
+      { red-normal }
       no_deco()
       fig-03()
       &.demo:hover
-        @extend $red_skeu_hover
+        { red-hover }
       &.demo:active
-        @extend $red_skeu_active
-
-
+        { red-active }

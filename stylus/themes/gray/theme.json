@@ -1,0 +1,43 @@
+{
+  "suffix": "'gray'",
+  "material": {
+    "duration": "100ms",
+    "texture": {
+      "type": "'flare'",
+      "times": 5,
+      "opacity": 0.2
+    },
+    "bg_color": "white",
+    "vignette_effect": 0.1,
+    "diffusion": 0.1,
+    "top": {
+      "blend": 0.25,
+      "alpha": 0.8
+    },
+    "bottom": {
+      "blend": 0.15,
+      "alpha": 0.5
+    }
+  },
+  "normal": {
+    "theme_color": "#aaa",
+    "lightness_mod": -25,
+    "saturation_mod": 0,
+    "spin_mod": "0deg",
+    "txt_color": "white"
+  },
+  "hover": {
+    "theme_color": "#999",
+    "lightness_mod": -37,
+    "saturation_mod": 0,
+    "spin_mod": "0deg",
+    "txt_color": "#222"
+  },
+  "active": {
+    "theme_color": "#888",
+    "lightness_mod": -40,
+    "saturation_mod": 0,
+    "spin_mod": "0deg",
+    "txt_color": "#222"
+  }
+}

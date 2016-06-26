@@ -1,16 +1,12 @@
-@import '../_import_theme/purple.styl'
 @import '../../stylus/skeu.styl'
-
-$params = gen-purple-theme()
-$params.material.texture.src = '../../images/pattern.png'
-
+$params = json('../../stylus/themes/purple/theme.json', { hash: true })
 stylus-skeuomorphic($params)
 
-body-attrs = skeu-purple.bg_color
+body-attrs =$params.material.bg_color
 body
-  { body-attrs }
+  background-color body-attrs
 
-isolate-all =  skeu-purple.isolate-all
+isolate-all = skeu-purple.isolate-all
 
 .fig-01
   { isolate-all }
@@ -24,6 +20,7 @@ isolate-all =  skeu-purple.isolate-all
   display inline-block
   size auto auto
   margin 150px 0
+  border-radius 8px
 
 .fig-02
   { isolate-all }

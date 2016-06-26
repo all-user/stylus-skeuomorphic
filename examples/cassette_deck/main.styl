@@ -1,10 +1,12 @@
-$shadow_length = 0px
-$active_depth  = 1px
-
-@import '../_import_theme/pink.styl'
 @import '../../stylus/skeu.styl'
 
+$params = json('../../stylus/themes/pink/theme.json', { hash: true })
+$params.material.shadow_length = 0px
+$params.material.active_depth = 1px
 
+stylus-skeuomorphic($params)
+
+bg_color = $params.material.bg_color
 #stylus-skeu-2-background
   size 100% auto
   margin 0
@@ -12,7 +14,7 @@ $active_depth  = 1px
   position relative
   text-align center
   overflow-x scroll
-  bg_color()
+  background-color bg_color
 
 #stylus-skeu-2-wrapper
   display inline-block
@@ -21,29 +23,20 @@ $active_depth  = 1px
   margin auto
   position relative
 
+chain-all = skeu-pink.chain-all
 .stylus-skeu-2-pink
-  @extend $pink_skeu_chain
+  { chain-all }
   color black
-  &:hover
-    @extend $pink_skeu_chain_hover
-  &:active
-    @extend $pink_skeu_active
 
+chain-right-all = skeu-pink.chain-right-all
 .stylus-skeu-2-pink:nth-child(1)
-  @extend $pink_skeu_chain_r
+  { chain-right-all }
   color black
-  &:hover
-    @extend $pink_skeu_chain_r_hover
-  &:active
-    @extend $pink_skeu_active
 
+chain-left-all = skeu-pink.chain-left-all
 .stylus-skeu-2-pink:nth-last-child(1)
-  @extend $pink_skeu_chain_l
+  { chain-left-all }
   color black
-  &:hover
-    @extend $pink_skeu_chain_l_hover
-  &:active
-    @extend $pink_skeu_active
 
 .stylus-skeu-2-pink.stylus-skeu-2-skeu
   box-sizing border-box
@@ -58,6 +51,7 @@ $active_depth  = 1px
 .stylus-skeu-2-pink.stylus-skeu-2-skeu:nth-last-child(1)
   border-right none
 
+isolate-active = skeu-pink.isolate.active
 #stylus-skeu-2-rec-input
   display none
   & + #stylus-skeu-2-rec
@@ -65,7 +59,7 @@ $active_depth  = 1px
     &:active
       top 2px
   &:checked + #stylus-skeu-2-rec
-    @extend $pink_skeu_active
+    { isolate-active }
     top 1px
     color #f50
   &:checked + #stylus-skeu-2-rec:active
@@ -78,7 +72,7 @@ $active_depth  = 1px
     &:active
       top 2px
   &:checked + #stylus-skeu-2-play
-    @extend $pink_skeu_active
+    { isolate-active }
     top 1px
     color #0a9
   &:checked + #stylus-skeu-2-play:active
