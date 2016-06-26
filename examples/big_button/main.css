@@ -19,6 +19,7 @@ body {
   -webkit-background-size: auto, auto, 300px 300px;
   -moz-background-size: auto, auto, 300px 300px;
   background-size: auto, auto, 300px 300px;
+  border: none;
   text-shadow: 0px -1px 0px #000, 0px -2px 0px rgba(191,191,214,0.6), 0px -3px 0px #afacbb, 0px 1px 0px rgba(191,191,214,0.6), 0px 3px rgba(0,0,0,0.2);
   -webkit-box-shadow: -1px 0px 0px 0px rgba(255,255,255,0.2) inset, -4px 0px 2px -2px #afacbb inset, 1px 0px 0px 0px rgba(255,255,255,0.2) inset, 4px 0px 2px -2px #afacbb inset, 0px 1px 0px 0px #afacbb inset, 0px 2px 0px 0px #fff inset, 0px -1px 0px 0px #000 inset, 0px -10px 5px -8px rgba(255,255,255,0.8) inset, 0px 0px 30px 5px rgba(191,191,214,0.6) inset, 0px 0px 30px 5px rgba(0,0,0,0.25) inset, 0px 0px 40px 15px rgba(255,255,255,0.1) inset, 0px 5px 5px -5px #38002a inset, 0px 5px 5px 0px rgba(255,255,255,0.03) inset, 0px -5px 0px 0px rgba(0,0,0,0.4) inset, 0px  5px 0px rgba(44,44,112,0.15);
   box-shadow: -1px 0px 0px 0px rgba(255,255,255,0.2) inset, -4px 0px 2px -2px #afacbb inset, 1px 0px 0px 0px rgba(255,255,255,0.2) inset, 4px 0px 2px -2px #afacbb inset, 0px 1px 0px 0px #afacbb inset, 0px 2px 0px 0px #fff inset, 0px -1px 0px 0px #000 inset, 0px -10px 5px -8px rgba(255,255,255,0.8) inset, 0px 0px 30px 5px rgba(191,191,214,0.6) inset, 0px 0px 30px 5px rgba(0,0,0,0.25) inset, 0px 0px 40px 15px rgba(255,255,255,0.1) inset, 0px 5px 5px -5px #38002a inset, 0px 5px 5px 0px rgba(255,255,255,0.03) inset, 0px -5px 0px 0px rgba(0,0,0,0.4) inset, 0px  5px 0px rgba(44,44,112,0.15);
@@ -48,6 +49,7 @@ body {
   -webkit-background-size: auto, auto, 300px 300px;
   -moz-background-size: auto, auto, 300px 300px;
   background-size: auto, auto, 300px 300px;
+  border: none;
   text-shadow: 0px -1px 0px #000, 0px -2px 0px rgba(191,191,214,0.6), 0px -3px 0px #8a859b, 0px 1px 0px rgba(191,191,214,0.6), 0px 3px rgba(0,0,0,0.2);
   -webkit-box-shadow: -1px 0px 0px 0px rgba(255,255,255,0.2) inset, -4px 0px 2px -2px #8a859b inset, 1px 0px 0px 0px rgba(255,255,255,0.2) inset, 4px 0px 2px -2px #8a859b inset, 0px 1px 0px 0px #8a859b inset, 0px 2px 0px 0px #fff inset, 0px -1px 0px 0px #000 inset, 0px -10px 5px -8px rgba(255,255,255,0.8) inset, 0px 0px 30px 5px rgba(191,191,214,0.6) inset, 0px 0px 30px 5px rgba(0,0,0,0.25) inset, 0px 0px 40px 15px rgba(255,255,255,0.1) inset, 0px 5px 5px -5px #38002a inset, 0px 5px 5px 0px rgba(255,255,255,0.03) inset, 0px -5px 0px 0px rgba(0,0,0,0.4) inset, 0px  5px 0px rgba(37,21,54,0.15);
   box-shadow: -1px 0px 0px 0px rgba(255,255,255,0.2) inset, -4px 0px 2px -2px #8a859b inset, 1px 0px 0px 0px rgba(255,255,255,0.2) inset, 4px 0px 2px -2px #8a859b inset, 0px 1px 0px 0px #8a859b inset, 0px 2px 0px 0px #fff inset, 0px -1px 0px 0px #000 inset, 0px -10px 5px -8px rgba(255,255,255,0.8) inset, 0px 0px 30px 5px rgba(191,191,214,0.6) inset, 0px 0px 30px 5px rgba(0,0,0,0.25) inset, 0px 0px 40px 15px rgba(255,255,255,0.1) inset, 0px 5px 5px -5px #38002a inset, 0px 5px 5px 0px rgba(255,255,255,0.03) inset, 0px -5px 0px 0px rgba(0,0,0,0.4) inset, 0px  5px 0px rgba(37,21,54,0.15);
@@ -62,6 +64,7 @@ body {
   -webkit-background-size: auto, auto, 300px 300px;
   -moz-background-size: auto, auto, 300px 300px;
   background-size: auto, auto, 300px 300px;
+  border: none;
   text-shadow: 0px -1px 0px #000, 0px -2px 0px rgba(191,191,214,0.6), 0px -3px 0px #716b87, 0px 1px 0px rgba(191,191,214,0.6), 0px 3px rgba(0,0,0,0.2);
   -webkit-box-shadow: 0px 3px 0px 0px rgba(191,191,214,0.6) inset, 0px 4px 0px 0px #000 inset, -2px 0px 2px 0px rgba(0,0,0,0.25) inset, -4px 0px 4px -2px #5e667f inset, 2px 0px 2px 0px rgba(0,0,0,0.25) inset, 4px 0px 4px -2px #5e667f inset, 0px 1px 0px 0px #716b87 inset, 0px -1px 15px 0px #716b87 inset, 0px 0px 30px 5px rgba(191,191,214,0.6) inset, 0px 0px 30px 5px rgba(0,0,0,0.25) inset, 0px 0px 40px 15px rgba(255,255,255,0.1) inset, 0px 5px 5px -5px #38002a inset, 0px 5px 5px 0px rgba(0,0,0,0.4) inset, 0px -5px 20px -5px #000 inset, 0px 1px 2px 0px rgba(255,255,255,0.2);
   box-shadow: 0px 3px 0px 0px rgba(191,191,214,0.6) inset, 0px 4px 0px 0px #000 inset, -2px 0px 2px 0px rgba(0,0,0,0.25) inset, -4px 0px 4px -2px #5e667f inset, 2px 0px 2px 0px rgba(0,0,0,0.25) inset, 4px 0px 4px -2px #5e667f inset, 0px 1px 0px 0px #716b87 inset, 0px -1px 15px 0px #716b87 inset, 0px 0px 30px 5px rgba(191,191,214,0.6) inset, 0px 0px 30px 5px rgba(0,0,0,0.25) inset, 0px 0px 40px 15px rgba(255,255,255,0.1) inset, 0px 5px 5px -5px #38002a inset, 0px 5px 5px 0px rgba(0,0,0,0.4) inset, 0px -5px 20px -5px #000 inset, 0px 1px 2px 0px rgba(255,255,255,0.2);
@@ -84,6 +87,7 @@ body {
   -webkit-background-size: auto, auto, 300px 300px;
   -moz-background-size: auto, auto, 300px 300px;
   background-size: auto, auto, 300px 300px;
+  border: none;
   text-shadow: 0px -1px 0px #000, 0px -2px 0px rgba(191,191,214,0.6), 0px -3px 0px #afacbb, 0px 1px 0px rgba(191,191,214,0.6), 0px 3px rgba(0,0,0,0.2);
   -webkit-box-shadow: -1px 0px 0px 0px rgba(255,255,255,0.2) inset, -4px 0px 2px -2px #afacbb inset, 1px 0px 0px 0px rgba(255,255,255,0.2) inset, 4px 0px 2px -2px #afacbb inset, 0px 1px 0px 0px #afacbb inset, 0px 2px 0px 0px #fff inset, 0px -1px 0px 0px #000 inset, 0px -10px 5px -8px rgba(255,255,255,0.8) inset, 0px 0px 30px 5px rgba(191,191,214,0.6) inset, 0px 0px 30px 5px rgba(0,0,0,0.25) inset, 0px 0px 40px 15px rgba(255,255,255,0.1) inset, 0px 5px 5px -5px #38002a inset, 0px 5px 5px 0px rgba(255,255,255,0.03) inset, 0px -5px 0px 0px rgba(0,0,0,0.4) inset, 0px  5px 0px rgba(44,44,112,0.15);
   box-shadow: -1px 0px 0px 0px rgba(255,255,255,0.2) inset, -4px 0px 2px -2px #afacbb inset, 1px 0px 0px 0px rgba(255,255,255,0.2) inset, 4px 0px 2px -2px #afacbb inset, 0px 1px 0px 0px #afacbb inset, 0px 2px 0px 0px #fff inset, 0px -1px 0px 0px #000 inset, 0px -10px 5px -8px rgba(255,255,255,0.8) inset, 0px 0px 30px 5px rgba(191,191,214,0.6) inset, 0px 0px 30px 5px rgba(0,0,0,0.25) inset, 0px 0px 40px 15px rgba(255,255,255,0.1) inset, 0px 5px 5px -5px #38002a inset, 0px 5px 5px 0px rgba(255,255,255,0.03) inset, 0px -5px 0px 0px rgba(0,0,0,0.4) inset, 0px  5px 0px rgba(44,44,112,0.15);
@@ -111,6 +115,7 @@ body {
   -webkit-background-size: auto, auto, 300px 300px;
   -moz-background-size: auto, auto, 300px 300px;
   background-size: auto, auto, 300px 300px;
+  border: none;
   text-shadow: 0px -1px 0px #000, 0px -2px 0px rgba(191,191,214,0.6), 0px -3px 0px #8a859b, 0px 1px 0px rgba(191,191,214,0.6), 0px 3px rgba(0,0,0,0.2);
   -webkit-box-shadow: -1px 0px 0px 0px rgba(255,255,255,0.2) inset, -4px 0px 2px -2px #8a859b inset, 1px 0px 0px 0px rgba(255,255,255,0.2) inset, 4px 0px 2px -2px #8a859b inset, 0px 1px 0px 0px #8a859b inset, 0px 2px 0px 0px #fff inset, 0px -1px 0px 0px #000 inset, 0px -10px 5px -8px rgba(255,255,255,0.8) inset, 0px 0px 30px 5px rgba(191,191,214,0.6) inset, 0px 0px 30px 5px rgba(0,0,0,0.25) inset, 0px 0px 40px 15px rgba(255,255,255,0.1) inset, 0px 5px 5px -5px #38002a inset, 0px 5px 5px 0px rgba(255,255,255,0.03) inset, 0px -5px 0px 0px rgba(0,0,0,0.4) inset, 0px  5px 0px rgba(37,21,54,0.15);
   box-shadow: -1px 0px 0px 0px rgba(255,255,255,0.2) inset, -4px 0px 2px -2px #8a859b inset, 1px 0px 0px 0px rgba(255,255,255,0.2) inset, 4px 0px 2px -2px #8a859b inset, 0px 1px 0px 0px #8a859b inset, 0px 2px 0px 0px #fff inset, 0px -1px 0px 0px #000 inset, 0px -10px 5px -8px rgba(255,255,255,0.8) inset, 0px 0px 30px 5px rgba(191,191,214,0.6) inset, 0px 0px 30px 5px rgba(0,0,0,0.25) inset, 0px 0px 40px 15px rgba(255,255,255,0.1) inset, 0px 5px 5px -5px #38002a inset, 0px 5px 5px 0px rgba(255,255,255,0.03) inset, 0px -5px 0px 0px rgba(0,0,0,0.4) inset, 0px  5px 0px rgba(37,21,54,0.15);
@@ -125,6 +130,7 @@ body {
   -webkit-background-size: auto, auto, 300px 300px;
   -moz-background-size: auto, auto, 300px 300px;
   background-size: auto, auto, 300px 300px;
+  border: none;
   text-shadow: 0px -1px 0px #000, 0px -2px 0px rgba(191,191,214,0.6), 0px -3px 0px #716b87, 0px 1px 0px rgba(191,191,214,0.6), 0px 3px rgba(0,0,0,0.2);
   -webkit-box-shadow: 0px 3px 0px 0px rgba(191,191,214,0.6) inset, 0px 4px 0px 0px #000 inset, -2px 0px 2px 0px rgba(0,0,0,0.25) inset, -4px 0px 4px -2px #5e667f inset, 2px 0px 2px 0px rgba(0,0,0,0.25) inset, 4px 0px 4px -2px #5e667f inset, 0px 1px 0px 0px #716b87 inset, 0px -1px 15px 0px #716b87 inset, 0px 0px 30px 5px rgba(191,191,214,0.6) inset, 0px 0px 30px 5px rgba(0,0,0,0.25) inset, 0px 0px 40px 15px rgba(255,255,255,0.1) inset, 0px 5px 5px -5px #38002a inset, 0px 5px 5px 0px rgba(0,0,0,0.4) inset, 0px -5px 20px -5px #000 inset, 0px 1px 2px 0px rgba(255,255,255,0.2);
   box-shadow: 0px 3px 0px 0px rgba(191,191,214,0.6) inset, 0px 4px 0px 0px #000 inset, -2px 0px 2px 0px rgba(0,0,0,0.25) inset, -4px 0px 4px -2px #5e667f inset, 2px 0px 2px 0px rgba(0,0,0,0.25) inset, 4px 0px 4px -2px #5e667f inset, 0px 1px 0px 0px #716b87 inset, 0px -1px 15px 0px #716b87 inset, 0px 0px 30px 5px rgba(191,191,214,0.6) inset, 0px 0px 30px 5px rgba(0,0,0,0.25) inset, 0px 0px 40px 15px rgba(255,255,255,0.1) inset, 0px 5px 5px -5px #38002a inset, 0px 5px 5px 0px rgba(0,0,0,0.4) inset, 0px -5px 20px -5px #000 inset, 0px 1px 2px 0px rgba(255,255,255,0.2);
@@ -147,6 +153,7 @@ body {
   -webkit-background-size: auto, auto, 300px 300px;
   -moz-background-size: auto, auto, 300px 300px;
   background-size: auto, auto, 300px 300px;
+  border: none;
   text-shadow: 0px -1px 0px #000, 0px -2px 0px rgba(191,191,214,0.6), 0px -3px 0px #afacbb, 0px 1px 0px rgba(191,191,214,0.6), 0px 3px rgba(0,0,0,0.2);
   -webkit-box-shadow: -1px 0px 0px 0px rgba(255,255,255,0.2) inset, -4px 0px 2px -2px #afacbb inset, 1px 0px 0px 0px rgba(255,255,255,0.2) inset, 4px 0px 2px -2px #afacbb inset, 0px 1px 0px 0px #afacbb inset, 0px 2px 0px 0px #fff inset, 0px -1px 0px 0px #000 inset, 0px -10px 5px -8px rgba(255,255,255,0.8) inset, 0px 0px 30px 5px rgba(191,191,214,0.6) inset, 0px 0px 30px 5px rgba(0,0,0,0.25) inset, 0px 0px 40px 15px rgba(255,255,255,0.1) inset, 0px 5px 5px -5px #38002a inset, 0px 5px 5px 0px rgba(255,255,255,0.03) inset, 0px -5px 0px 0px rgba(0,0,0,0.4) inset, 0px  5px 0px rgba(44,44,112,0.15);
   box-shadow: -1px 0px 0px 0px rgba(255,255,255,0.2) inset, -4px 0px 2px -2px #afacbb inset, 1px 0px 0px 0px rgba(255,255,255,0.2) inset, 4px 0px 2px -2px #afacbb inset, 0px 1px 0px 0px #afacbb inset, 0px 2px 0px 0px #fff inset, 0px -1px 0px 0px #000 inset, 0px -10px 5px -8px rgba(255,255,255,0.8) inset, 0px 0px 30px 5px rgba(191,191,214,0.6) inset, 0px 0px 30px 5px rgba(0,0,0,0.25) inset, 0px 0px 40px 15px rgba(255,255,255,0.1) inset, 0px 5px 5px -5px #38002a inset, 0px 5px 5px 0px rgba(255,255,255,0.03) inset, 0px -5px 0px 0px rgba(0,0,0,0.4) inset, 0px  5px 0px rgba(44,44,112,0.15);
@@ -173,6 +180,7 @@ body {
   -webkit-background-size: auto, auto, 300px 300px;
   -moz-background-size: auto, auto, 300px 300px;
   background-size: auto, auto, 300px 300px;
+  border: none;
   text-shadow: 0px -1px 0px #000, 0px -2px 0px rgba(191,191,214,0.6), 0px -3px 0px #8a859b, 0px 1px 0px rgba(191,191,214,0.6), 0px 3px rgba(0,0,0,0.2);
   -webkit-box-shadow: -1px 0px 0px 0px rgba(255,255,255,0.2) inset, -4px 0px 2px -2px #8a859b inset, 1px 0px 0px 0px rgba(255,255,255,0.2) inset, 4px 0px 2px -2px #8a859b inset, 0px 1px 0px 0px #8a859b inset, 0px 2px 0px 0px #fff inset, 0px -1px 0px 0px #000 inset, 0px -10px 5px -8px rgba(255,255,255,0.8) inset, 0px 0px 30px 5px rgba(191,191,214,0.6) inset, 0px 0px 30px 5px rgba(0,0,0,0.25) inset, 0px 0px 40px 15px rgba(255,255,255,0.1) inset, 0px 5px 5px -5px #38002a inset, 0px 5px 5px 0px rgba(255,255,255,0.03) inset, 0px -5px 0px 0px rgba(0,0,0,0.4) inset, 0px  5px 0px rgba(37,21,54,0.15);
   box-shadow: -1px 0px 0px 0px rgba(255,255,255,0.2) inset, -4px 0px 2px -2px #8a859b inset, 1px 0px 0px 0px rgba(255,255,255,0.2) inset, 4px 0px 2px -2px #8a859b inset, 0px 1px 0px 0px #8a859b inset, 0px 2px 0px 0px #fff inset, 0px -1px 0px 0px #000 inset, 0px -10px 5px -8px rgba(255,255,255,0.8) inset, 0px 0px 30px 5px rgba(191,191,214,0.6) inset, 0px 0px 30px 5px rgba(0,0,0,0.25) inset, 0px 0px 40px 15px rgba(255,255,255,0.1) inset, 0px 5px 5px -5px #38002a inset, 0px 5px 5px 0px rgba(255,255,255,0.03) inset, 0px -5px 0px 0px rgba(0,0,0,0.4) inset, 0px  5px 0px rgba(37,21,54,0.15);
@@ -187,6 +195,7 @@ body {
   -webkit-background-size: auto, auto, 300px 300px;
   -moz-background-size: auto, auto, 300px 300px;
   background-size: auto, auto, 300px 300px;
+  border: none;
   text-shadow: 0px -1px 0px #000, 0px -2px 0px rgba(191,191,214,0.6), 0px -3px 0px #716b87, 0px 1px 0px rgba(191,191,214,0.6), 0px 3px rgba(0,0,0,0.2);
   -webkit-box-shadow: 0px 3px 0px 0px rgba(191,191,214,0.6) inset, 0px 4px 0px 0px #000 inset, -2px 0px 2px 0px rgba(0,0,0,0.25) inset, -4px 0px 4px -2px #5e667f inset, 2px 0px 2px 0px rgba(0,0,0,0.25) inset, 4px 0px 4px -2px #5e667f inset, 0px 1px 0px 0px #716b87 inset, 0px -1px 15px 0px #716b87 inset, 0px 0px 30px 5px rgba(191,191,214,0.6) inset, 0px 0px 30px 5px rgba(0,0,0,0.25) inset, 0px 0px 40px 15px rgba(255,255,255,0.1) inset, 0px 5px 5px -5px #38002a inset, 0px 5px 5px 0px rgba(0,0,0,0.4) inset, 0px -5px 20px -5px #000 inset, 0px 1px 2px 0px rgba(255,255,255,0.2);
   box-shadow: 0px 3px 0px 0px rgba(191,191,214,0.6) inset, 0px 4px 0px 0px #000 inset, -2px 0px 2px 0px rgba(0,0,0,0.25) inset, -4px 0px 4px -2px #5e667f inset, 2px 0px 2px 0px rgba(0,0,0,0.25) inset, 4px 0px 4px -2px #5e667f inset, 0px 1px 0px 0px #716b87 inset, 0px -1px 15px 0px #716b87 inset, 0px 0px 30px 5px rgba(191,191,214,0.6) inset, 0px 0px 30px 5px rgba(0,0,0,0.25) inset, 0px 0px 40px 15px rgba(255,255,255,0.1) inset, 0px 5px 5px -5px #38002a inset, 0px 5px 5px 0px rgba(0,0,0,0.4) inset, 0px -5px 20px -5px #000 inset, 0px 1px 2px 0px rgba(255,255,255,0.2);

@@ -31,7 +31,8 @@ __skeu_common($material, $state)
   ret = {
     color: $state.txt_color,
     background: convert(__vignette($material, $state) + ',' + __reflection($material, $state) + ',' + __draw_texture($material, $state) + ',' + vars.base_color),
-    background-size: convert('auto, auto,' + size)
+    background-size: convert('auto, auto,' + size),
+    border: none
   }
   return merge(ret, __draw_text(vars))
 
