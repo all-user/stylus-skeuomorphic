@@ -14,6 +14,7 @@ $reflection = __reflection($params.material, $params.normal)
 $texture = __draw_texture($params.material, $params.normal)
 
 base_color = $vars.base_color
+define('stylus-skeu-2-text-shadow', __draw_text($vars), true)
 
 bg_color = $params.material.bg_color
 #stylus-skeu-2-resolve-bg
@@ -50,7 +51,7 @@ bg_color = $params.material.bg_color
     #stylus-skeu-2-text
       z-index 500
       color #58a
-      text-shadow __draw_text($vars)
+      { stylus-skeu-2-text-shadow }
       & > i
         color #58a
         font-size ($resolve_size / 3)

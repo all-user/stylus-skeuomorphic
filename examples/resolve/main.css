@@ -20,7 +20,6 @@
 #stylus-skeu-2-resolve-bg #stylus-skeu-2-resolve-wrapper > div {
   display: inline-block;
   position: relative;
-  -webkit-border-radius: 50%;
   border-radius: 50%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -49,7 +48,7 @@ html[data-device="touch"] #stylus-skeu-2-resolve-bg #stylus-skeu-2-resolve-wrapp
 #stylus-skeu-2-resolve-bg #stylus-skeu-2-resolve-wrapper #stylus-skeu-2-text {
   z-index: 500;
   color: #58a;
-  text-shadow: {"text-shadow":"(((0px -1px 0px (((#000)))), (0px -2px 0px (((rgba(155,140,129,0.6))))), (0px -3px 0px (((#4c4a44)))), (0px 1px 0px (((rgba(155,140,129,0.6))))), (0px 3px rgba(0,0,0,0.2))))"};
+  text-shadow: 0px -1px 0px #000, 0px -2px 0px rgba(155,140,129,0.6), 0px -3px 0px #4c4a44, 0px 1px 0px rgba(155,140,129,0.6), 0px 3px rgba(0,0,0,0.2);
 }
 #stylus-skeu-2-resolve-bg #stylus-skeu-2-resolve-wrapper #stylus-skeu-2-text > i {
   color: #58a;
